@@ -1,0 +1,374 @@
+
+*** Running vivado
+    with args -log mult_gen_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source mult_gen_0.tcl
+
+
+****** Vivado v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source mult_gen_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2685.812 ; gain = 0.023 ; free physical = 281302 ; free virtual = 563766
+Command: synth_design -top mult_gen_0 -part xcvu9p-flga2104-2L-e -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcvu9p'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcvu9p'
+INFO: [Device 21-403] Loading part xcvu9p-flga2104-2L-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 3618947
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3196.527 ; gain = 295.766 ; free physical = 278949 ; free virtual = 561414
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'mult_gen_0' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.gen/sources_1/ip/mult_gen_0/synth/mult_gen_0.vhd:69]
+WARNING: [Synth 8-5640] Port 'zero_detect' is missing in component declaration [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.gen/sources_1/ip/mult_gen_0/synth/mult_gen_0.vhd:72]
+WARNING: [Synth 8-5640] Port 'pcasc' is missing in component declaration [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.gen/sources_1/ip/mult_gen_0/synth/mult_gen_0.vhd:72]
+	Parameter C_VERBOSITY bound to: 0 - type: integer 
+	Parameter C_MODEL_TYPE bound to: 0 - type: integer 
+	Parameter C_OPTIMIZE_GOAL bound to: 1 - type: integer 
+	Parameter C_XDEVICEFAMILY bound to: virtexuplus - type: string 
+	Parameter C_HAS_CE bound to: 1 - type: integer 
+	Parameter C_HAS_SCLR bound to: 0 - type: integer 
+	Parameter C_LATENCY bound to: 3 - type: integer 
+	Parameter C_A_WIDTH bound to: 34 - type: integer 
+	Parameter C_A_TYPE bound to: 1 - type: integer 
+	Parameter C_B_WIDTH bound to: 34 - type: integer 
+	Parameter C_B_TYPE bound to: 1 - type: integer 
+	Parameter C_OUT_HIGH bound to: 67 - type: integer 
+	Parameter C_OUT_LOW bound to: 0 - type: integer 
+	Parameter C_MULT_TYPE bound to: 1 - type: integer 
+	Parameter C_CE_OVERRIDES_SCLR bound to: 0 - type: integer 
+	Parameter C_CCM_IMP bound to: 0 - type: integer 
+	Parameter C_B_VALUE bound to: 10000001 - type: string 
+	Parameter C_HAS_ZERO_DETECT bound to: 0 - type: integer 
+	Parameter C_ROUND_OUTPUT bound to: 0 - type: integer 
+	Parameter C_ROUND_PT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'mult_gen_v12_0_17' declared at '/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.gen/sources_1/ip/mult_gen_0/hdl/mult_gen_v12_0_vh_rfs.vhd:21010' bound to instance 'U0' of component 'mult_gen_v12_0_17' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.gen/sources_1/ip/mult_gen_0/synth/mult_gen_0.vhd:123]
+INFO: [Synth 8-256] done synthesizing module 'mult_gen_0' (6#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.gen/sources_1/ip/mult_gen_0/synth/mult_gen_0.vhd:69]
+WARNING: [Synth 8-7129] Port CLK in module delay_line__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module delay_line__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay_line__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay_line__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module delay_line__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module delay_line__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay_line__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay_line__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module delay_line is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module delay_line is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay_line is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[24] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[23] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[22] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[21] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[20] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[19] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[18] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[17] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[16] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[15] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[14] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[13] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[12] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[11] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[10] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[9] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[8] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[7] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[6] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[5] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[4] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[3] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[2] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[1] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[0] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CARRY_IN in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module mult_gen_v12_0_17_viv is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 3267.465 ; gain = 366.703 ; free physical = 279829 ; free virtual = 562295
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 3285.277 ; gain = 384.516 ; free physical = 279827 ; free virtual = 562292
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 3285.277 ; gain = 384.516 ; free physical = 279827 ; free virtual = 562292
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3291.215 ; gain = 0.000 ; free physical = 279819 ; free virtual = 562285
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.gen/sources_1/ip/mult_gen_0/mult_gen_0_ooc.xdc] for cell 'U0'
+create_clock: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3436.871 ; gain = 0.000 ; free physical = 279701 ; free virtual = 562166
+Finished Parsing XDC File [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.gen/sources_1/ip/mult_gen_0/mult_gen_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.runs/mult_gen_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.runs/mult_gen_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3436.871 ; gain = 0.000 ; free physical = 279701 ; free virtual = 562166
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 4 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.17 . Memory (MB): peak = 3436.871 ; gain = 0.000 ; free physical = 279691 ; free virtual = 562156
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 3436.871 ; gain = 536.109 ; free physical = 279819 ; free virtual = 562285
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcvu9p-flga2104-2L-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 3436.871 ; gain = 536.109 ; free physical = 279819 ; free virtual = 562285
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  /shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.runs/mult_gen_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 3436.871 ; gain = 536.109 ; free physical = 279819 ; free virtual = 562285
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 3436.871 ; gain = 536.109 ; free physical = 279812 ; free virtual = 562278
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 6840 (col length:120)
+BRAMs: 4320 (col length: RAMB18 360 RAMB36 180)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port SCLR in module mult_gen_v12_0_17_viv is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 3436.871 ; gain = 536.109 ; free physical = 279809 ; free virtual = 562279
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:38 . Memory (MB): peak = 3659.137 ; gain = 758.375 ; free physical = 279320 ; free virtual = 561790
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:39 . Memory (MB): peak = 3661.137 ; gain = 760.375 ; free physical = 279320 ; free virtual = 561790
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:39 . Memory (MB): peak = 3680.168 ; gain = 779.406 ; free physical = 279318 ; free virtual = 561788
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 3686.105 ; gain = 785.344 ; free physical = 279317 ; free virtual = 561786
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 3686.105 ; gain = 785.344 ; free physical = 279317 ; free virtual = 561786
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 3686.105 ; gain = 785.344 ; free physical = 279317 ; free virtual = 561786
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 3686.105 ; gain = 785.344 ; free physical = 279317 ; free virtual = 561786
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 3686.105 ; gain = 785.344 ; free physical = 279317 ; free virtual = 561786
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 3686.105 ; gain = 785.344 ; free physical = 279317 ; free virtual = 561786
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |DSP_ALU         |     4|
+|3     |DSP_A_B_DATA    |     4|
+|7     |DSP_C_DATA      |     4|
+|8     |DSP_MULTIPLIER  |     4|
+|9     |DSP_M_DATA      |     4|
+|11    |DSP_OUTPUT      |     4|
+|13    |DSP_PREADD      |     4|
+|14    |DSP_PREADD_DATA |     4|
+|15    |FDRE            |    34|
++------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 3686.105 ; gain = 785.344 ; free physical = 279317 ; free virtual = 561786
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 96 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 3686.105 ; gain = 633.750 ; free physical = 279346 ; free virtual = 561816
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 3686.113 ; gain = 785.344 ; free physical = 279452 ; free virtual = 561922
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3686.113 ; gain = 0.000 ; free physical = 279449 ; free virtual = 561919
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3760.863 ; gain = 0.000 ; free physical = 279354 ; free virtual = 561824
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 4 instances
+
+Synth Design complete, checksum: 1b2007fe
+INFO: [Common 17-83] Releasing license: Synthesis
+20 Infos, 136 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:01:00 . Memory (MB): peak = 3760.863 ; gain = 1075.051 ; free physical = 279559 ; free virtual = 562028
+INFO: [Common 17-1381] The checkpoint '/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.runs/mult_gen_0_synth_1/mult_gen_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP mult_gen_0, cache-ID = ca590d6eb682ac9c
+INFO: [Coretcl 2-1174] Renamed 5 cell refs.
+INFO: [Common 17-1381] The checkpoint '/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.runs/mult_gen_0_synth_1/mult_gen_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file mult_gen_0_utilization_synth.rpt -pb mult_gen_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Jun 25 01:31:27 2024...
