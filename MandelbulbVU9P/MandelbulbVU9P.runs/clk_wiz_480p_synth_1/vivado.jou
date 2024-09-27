@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Fri Sep 27 02:44:13 2024
+# Process ID: 1982559
+# Current directory: /shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.runs/clk_wiz_480p_synth_1
+# Command line: vivado -log clk_wiz_480p.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source clk_wiz_480p.tcl
+# Log file: /shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.runs/clk_wiz_480p_synth_1/clk_wiz_480p.vds
+# Journal file: /shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.runs/clk_wiz_480p_synth_1/vivado.jou
+# Running On: nct-epic, OS: Linux, CPU Frequency: 1200.000 MHz, CPU Physical cores: 32, Host memory: 676201 MB
+#-----------------------------------------------------------
+source clk_wiz_480p.tcl -notrace

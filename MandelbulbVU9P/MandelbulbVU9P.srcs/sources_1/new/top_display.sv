@@ -64,4 +64,24 @@ module top_display(
     .o_blue(blue)
   );
 
+clk_wiz_480p instance_name1
+   (
+    // Clock out ports
+    .clk_out_25MHz(clk_out_25MHz),     // output clk_out_25MHz
+    .clk_out_250MHz(clk_out_250MHz),     // output clk_out_250MHz
+    // Status and control signals
+    .locked(locked),       // output locked
+   // Clock in ports
+    .clk(clk)); 
+    
+  clk_wiz_720p instance_name2
+   (
+    // Clock out ports
+    .clk_out_74MHz(clk_out_74MHz),     // output clk_out_74MHz
+    .clk_out_742MHz(clk_out_742MHz),     // output clk_out_742MHz
+    // Status and control signals
+    .locked(locked),       // output locked
+   // Clock in ports
+    .clk(clk));      // input clk
+
 endmodule
