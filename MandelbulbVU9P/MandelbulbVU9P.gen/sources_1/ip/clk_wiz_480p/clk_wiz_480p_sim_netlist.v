@@ -1,7 +1,7 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-// Date        : Fri Sep 27 02:45:49 2024
+// Date        : Sat Sep 28 22:33:26 2024
 // Host        : nct-epic running 64-bit Debian GNU/Linux 12 (bookworm)
 // Command     : write_verilog -force -mode funcsim
 //               /shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.gen/sources_1/ip/clk_wiz_480p/clk_wiz_480p_sim_netlist.v
@@ -15,41 +15,41 @@
 (* NotValidForBitStream *)
 module clk_wiz_480p
    (clk_out_25MHz,
-    clk_out_250MHz,
+    clk_out_125MHz,
     locked,
     clk);
   output clk_out_25MHz;
-  output clk_out_250MHz;
+  output clk_out_125MHz;
   output locked;
   input clk;
 
   (* IBUF_LOW_PWR *) wire clk;
-  wire clk_out_250MHz;
+  wire clk_out_125MHz;
   wire clk_out_25MHz;
   wire locked;
 
   clk_wiz_480p_clk_wiz inst
        (.clk(clk),
-        .clk_out_250MHz(clk_out_250MHz),
+        .clk_out_125MHz(clk_out_125MHz),
         .clk_out_25MHz(clk_out_25MHz),
         .locked(locked));
 endmodule
 
 module clk_wiz_480p_clk_wiz
    (clk_out_25MHz,
-    clk_out_250MHz,
+    clk_out_125MHz,
     locked,
     clk);
   output clk_out_25MHz;
-  output clk_out_250MHz;
+  output clk_out_125MHz;
   output locked;
   input clk;
 
   wire clk;
   wire clk_clk_wiz_480p;
-  wire clk_out_250MHz;
-  wire clk_out_250MHz_clk_wiz_480p;
-  wire clk_out_250MHz_clk_wiz_480p_en_clk;
+  wire clk_out_125MHz;
+  wire clk_out_125MHz_clk_wiz_480p;
+  wire clk_out_125MHz_clk_wiz_480p_en_clk;
   wire clk_out_25MHz;
   wire clk_out_25MHz_clk_wiz_480p;
   wire clk_out_25MHz_clk_wiz_480p_en_clk;
@@ -125,8 +125,8 @@ module clk_wiz_480p_clk_wiz
     .STARTUP_SYNC("FALSE")) 
     clkout2_buf
        (.CE(seq_reg2[7]),
-        .I(clk_out_250MHz_clk_wiz_480p),
-        .O(clk_out_250MHz));
+        .I(clk_out_125MHz_clk_wiz_480p),
+        .O(clk_out_125MHz));
   (* BOX_TYPE = "PRIMITIVE" *) 
   BUFGCE #(
     .CE_TYPE("SYNC"),
@@ -136,8 +136,8 @@ module clk_wiz_480p_clk_wiz
     .STARTUP_SYNC("FALSE")) 
     clkout2_buf_en
        (.CE(1'b1),
-        .I(clk_out_250MHz_clk_wiz_480p),
-        .O(clk_out_250MHz_clk_wiz_480p_en_clk));
+        .I(clk_out_125MHz_clk_wiz_480p),
+        .O(clk_out_125MHz_clk_wiz_480p_en_clk));
   (* BOX_TYPE = "PRIMITIVE" *) 
   MMCME4_ADV #(
     .BANDWIDTH("OPTIMIZED"),
@@ -150,7 +150,7 @@ module clk_wiz_480p_clk_wiz
     .CLKOUT0_DUTY_CYCLE(0.500000),
     .CLKOUT0_PHASE(0.000000),
     .CLKOUT0_USE_FINE_PS("FALSE"),
-    .CLKOUT1_DIVIDE(5),
+    .CLKOUT1_DIVIDE(10),
     .CLKOUT1_DUTY_CYCLE(0.500000),
     .CLKOUT1_PHASE(0.000000),
     .CLKOUT1_USE_FINE_PS("FALSE"),
@@ -204,7 +204,7 @@ module clk_wiz_480p_clk_wiz
         .CLKINSTOPPED(NLW_mmcme4_adv_inst_CLKINSTOPPED_UNCONNECTED),
         .CLKOUT0(clk_out_25MHz_clk_wiz_480p),
         .CLKOUT0B(NLW_mmcme4_adv_inst_CLKOUT0B_UNCONNECTED),
-        .CLKOUT1(clk_out_250MHz_clk_wiz_480p),
+        .CLKOUT1(clk_out_125MHz_clk_wiz_480p),
         .CLKOUT1B(NLW_mmcme4_adv_inst_CLKOUT1B_UNCONNECTED),
         .CLKOUT2(NLW_mmcme4_adv_inst_CLKOUT2_UNCONNECTED),
         .CLKOUT2B(NLW_mmcme4_adv_inst_CLKOUT2B_UNCONNECTED),
@@ -312,7 +312,7 @@ module clk_wiz_480p_clk_wiz
   FDRE #(
     .INIT(1'b0)) 
     \seq_reg2_reg[0] 
-       (.C(clk_out_250MHz_clk_wiz_480p_en_clk),
+       (.C(clk_out_125MHz_clk_wiz_480p_en_clk),
         .CE(1'b1),
         .D(locked),
         .Q(seq_reg2[0]),
@@ -322,7 +322,7 @@ module clk_wiz_480p_clk_wiz
   FDRE #(
     .INIT(1'b0)) 
     \seq_reg2_reg[1] 
-       (.C(clk_out_250MHz_clk_wiz_480p_en_clk),
+       (.C(clk_out_125MHz_clk_wiz_480p_en_clk),
         .CE(1'b1),
         .D(seq_reg2[0]),
         .Q(seq_reg2[1]),
@@ -332,7 +332,7 @@ module clk_wiz_480p_clk_wiz
   FDRE #(
     .INIT(1'b0)) 
     \seq_reg2_reg[2] 
-       (.C(clk_out_250MHz_clk_wiz_480p_en_clk),
+       (.C(clk_out_125MHz_clk_wiz_480p_en_clk),
         .CE(1'b1),
         .D(seq_reg2[1]),
         .Q(seq_reg2[2]),
@@ -342,7 +342,7 @@ module clk_wiz_480p_clk_wiz
   FDRE #(
     .INIT(1'b0)) 
     \seq_reg2_reg[3] 
-       (.C(clk_out_250MHz_clk_wiz_480p_en_clk),
+       (.C(clk_out_125MHz_clk_wiz_480p_en_clk),
         .CE(1'b1),
         .D(seq_reg2[2]),
         .Q(seq_reg2[3]),
@@ -352,7 +352,7 @@ module clk_wiz_480p_clk_wiz
   FDRE #(
     .INIT(1'b0)) 
     \seq_reg2_reg[4] 
-       (.C(clk_out_250MHz_clk_wiz_480p_en_clk),
+       (.C(clk_out_125MHz_clk_wiz_480p_en_clk),
         .CE(1'b1),
         .D(seq_reg2[3]),
         .Q(seq_reg2[4]),
@@ -362,7 +362,7 @@ module clk_wiz_480p_clk_wiz
   FDRE #(
     .INIT(1'b0)) 
     \seq_reg2_reg[5] 
-       (.C(clk_out_250MHz_clk_wiz_480p_en_clk),
+       (.C(clk_out_125MHz_clk_wiz_480p_en_clk),
         .CE(1'b1),
         .D(seq_reg2[4]),
         .Q(seq_reg2[5]),
@@ -372,7 +372,7 @@ module clk_wiz_480p_clk_wiz
   FDRE #(
     .INIT(1'b0)) 
     \seq_reg2_reg[6] 
-       (.C(clk_out_250MHz_clk_wiz_480p_en_clk),
+       (.C(clk_out_125MHz_clk_wiz_480p_en_clk),
         .CE(1'b1),
         .D(seq_reg2[5]),
         .Q(seq_reg2[6]),
@@ -382,7 +382,7 @@ module clk_wiz_480p_clk_wiz
   FDRE #(
     .INIT(1'b0)) 
     \seq_reg2_reg[7] 
-       (.C(clk_out_250MHz_clk_wiz_480p_en_clk),
+       (.C(clk_out_125MHz_clk_wiz_480p_en_clk),
         .CE(1'b1),
         .D(seq_reg2[6]),
         .Q(seq_reg2[7]),

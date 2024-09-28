@@ -57,7 +57,7 @@
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
 // clk_out_25MHz__25.00000______0.000______50.0______148.007_____84.520
-// clk_out_250MHz__250.00000______0.000______50.0_______94.797_____84.520
+// clk_out_125MHz__125.00000______0.000______50.0______107.502_____84.520
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -71,7 +71,7 @@ module clk_wiz_480p_clk_wiz
  (// Clock in ports
   // Clock out ports
   output        clk_out_25MHz,
-  output        clk_out_250MHz,
+  output        clk_out_125MHz,
   // Status and control signals
   output        locked,
   input         clk
@@ -95,7 +95,7 @@ wire clk_in2_clk_wiz_480p;
   //    * Unused outputs are labeled unused
 
   wire        clk_out_25MHz_clk_wiz_480p;
-  wire        clk_out_250MHz_clk_wiz_480p;
+  wire        clk_out_125MHz_clk_wiz_480p;
   wire        clk_out3_clk_wiz_480p;
   wire        clk_out4_clk_wiz_480p;
   wire        clk_out5_clk_wiz_480p;
@@ -143,7 +143,7 @@ wire clk_in2_clk_wiz_480p;
     .CLKOUT0_PHASE        (0.000),
     .CLKOUT0_DUTY_CYCLE   (0.500),
     .CLKOUT0_USE_FINE_PS  ("FALSE"),
-    .CLKOUT1_DIVIDE       (5),
+    .CLKOUT1_DIVIDE       (10),
     .CLKOUT1_PHASE        (0.000),
     .CLKOUT1_DUTY_CYCLE   (0.500),
     .CLKOUT1_USE_FINE_PS  ("FALSE"),
@@ -156,7 +156,7 @@ wire clk_in2_clk_wiz_480p;
     .CLKFBOUTB           (clkfboutb_unused),
     .CLKOUT0             (clk_out_25MHz_clk_wiz_480p),
     .CLKOUT0B            (clkout0b_unused),
-    .CLKOUT1             (clk_out_250MHz_clk_wiz_480p),
+    .CLKOUT1             (clk_out_125MHz_clk_wiz_480p),
     .CLKOUT1B            (clkout1b_unused),
     .CLKOUT2             (clkout2_unused),
     .CLKOUT2B            (clkout2b_unused),
@@ -223,16 +223,16 @@ wire clk_in2_clk_wiz_480p;
 
 
   BUFGCE clkout2_buf
-   (.O   (clk_out_250MHz),
+   (.O   (clk_out_125MHz),
     .CE  (seq_reg2[7]),
-    .I   (clk_out_250MHz_clk_wiz_480p));
+    .I   (clk_out_125MHz_clk_wiz_480p));
  
   BUFGCE clkout2_buf_en
-   (.O   (clk_out_250MHz_clk_wiz_480p_en_clk),
+   (.O   (clk_out_125MHz_clk_wiz_480p_en_clk),
     .CE  (1'b1),
-    .I   (clk_out_250MHz_clk_wiz_480p));
+    .I   (clk_out_125MHz_clk_wiz_480p));
  
-  always @(posedge clk_out_250MHz_clk_wiz_480p_en_clk)
+  always @(posedge clk_out_125MHz_clk_wiz_480p_en_clk)
         seq_reg2 <= {seq_reg2[6:0],locked_int};
 
 

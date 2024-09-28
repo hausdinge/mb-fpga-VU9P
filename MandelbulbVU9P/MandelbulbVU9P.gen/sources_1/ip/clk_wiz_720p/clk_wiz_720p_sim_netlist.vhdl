@@ -1,7 +1,7 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
--- Date        : Fri Sep 27 02:54:16 2024
+-- Date        : Sat Sep 28 22:39:14 2024
 -- Host        : nct-epic running 64-bit Debian GNU/Linux 12 (bookworm)
 -- Command     : write_vhdl -force -mode funcsim
 --               /shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.gen/sources_1/ip/clk_wiz_720p/clk_wiz_720p_sim_netlist.vhdl
@@ -16,8 +16,8 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity clk_wiz_720p_clk_wiz is
   port (
-    clk_out_74MHz : out STD_LOGIC;
-    clk_out_742MHz : out STD_LOGIC;
+    clk_out_74_25MHz : out STD_LOGIC;
+    clk_out_371_25MHz : out STD_LOGIC;
     locked : out STD_LOGIC;
     clk : in STD_LOGIC
   );
@@ -25,10 +25,10 @@ end clk_wiz_720p_clk_wiz;
 
 architecture STRUCTURE of clk_wiz_720p_clk_wiz is
   signal clk_clk_wiz_720p : STD_LOGIC;
-  signal clk_out_742MHz_clk_wiz_720p : STD_LOGIC;
-  signal clk_out_742MHz_clk_wiz_720p_en_clk : STD_LOGIC;
-  signal clk_out_74MHz_clk_wiz_720p : STD_LOGIC;
-  signal clk_out_74MHz_clk_wiz_720p_en_clk : STD_LOGIC;
+  signal clk_out_371_25MHz_clk_wiz_720p : STD_LOGIC;
+  signal clk_out_371_25MHz_clk_wiz_720p_en_clk : STD_LOGIC;
+  signal clk_out_74_25MHz_clk_wiz_720p : STD_LOGIC;
+  signal clk_out_74_25MHz_clk_wiz_720p_en_clk : STD_LOGIC;
   signal clkfbout_buf_clk_wiz_720p : STD_LOGIC;
   signal clkfbout_clk_wiz_720p : STD_LOGIC;
   signal \^locked\ : STD_LOGIC;
@@ -138,8 +138,8 @@ clkout1_buf: unisim.vcomponents.BUFGCE
     )
         port map (
       CE => seq_reg1(7),
-      I => clk_out_74MHz_clk_wiz_720p,
-      O => clk_out_74MHz
+      I => clk_out_74_25MHz_clk_wiz_720p,
+      O => clk_out_74_25MHz
     );
 clkout1_buf_en: unisim.vcomponents.BUFGCE
     generic map(
@@ -151,8 +151,8 @@ clkout1_buf_en: unisim.vcomponents.BUFGCE
     )
         port map (
       CE => '1',
-      I => clk_out_74MHz_clk_wiz_720p,
-      O => clk_out_74MHz_clk_wiz_720p_en_clk
+      I => clk_out_74_25MHz_clk_wiz_720p,
+      O => clk_out_74_25MHz_clk_wiz_720p_en_clk
     );
 clkout2_buf: unisim.vcomponents.BUFGCE
     generic map(
@@ -164,8 +164,8 @@ clkout2_buf: unisim.vcomponents.BUFGCE
     )
         port map (
       CE => seq_reg2(7),
-      I => clk_out_742MHz_clk_wiz_720p,
-      O => clk_out_742MHz
+      I => clk_out_371_25MHz_clk_wiz_720p,
+      O => clk_out_371_25MHz
     );
 clkout2_buf_en: unisim.vcomponents.BUFGCE
     generic map(
@@ -177,22 +177,22 @@ clkout2_buf_en: unisim.vcomponents.BUFGCE
     )
         port map (
       CE => '1',
-      I => clk_out_742MHz_clk_wiz_720p,
-      O => clk_out_742MHz_clk_wiz_720p_en_clk
+      I => clk_out_371_25MHz_clk_wiz_720p,
+      O => clk_out_371_25MHz_clk_wiz_720p_en_clk
     );
 mmcme4_adv_inst: unisim.vcomponents.MMCME4_ADV
     generic map(
       BANDWIDTH => "OPTIMIZED",
-      CLKFBOUT_MULT_F => 74.250000,
+      CLKFBOUT_MULT_F => 111.375000,
       CLKFBOUT_PHASE => 0.000000,
       CLKFBOUT_USE_FINE_PS => "FALSE",
       CLKIN1_PERIOD => 10.000000,
       CLKIN2_PERIOD => 0.000000,
-      CLKOUT0_DIVIDE_F => 20.000000,
+      CLKOUT0_DIVIDE_F => 15.000000,
       CLKOUT0_DUTY_CYCLE => 0.500000,
       CLKOUT0_PHASE => 0.000000,
       CLKOUT0_USE_FINE_PS => "FALSE",
-      CLKOUT1_DIVIDE => 2,
+      CLKOUT1_DIVIDE => 3,
       CLKOUT1_DUTY_CYCLE => 0.500000,
       CLKOUT1_PHASE => 0.000000,
       CLKOUT1_USE_FINE_PS => "FALSE",
@@ -218,7 +218,7 @@ mmcme4_adv_inst: unisim.vcomponents.MMCME4_ADV
       CLKOUT6_PHASE => 0.000000,
       CLKOUT6_USE_FINE_PS => "FALSE",
       COMPENSATION => "ZHOLD",
-      DIVCLK_DIVIDE => 5,
+      DIVCLK_DIVIDE => 10,
       IS_CLKFBIN_INVERTED => '0',
       IS_CLKIN1_INVERTED => '0',
       IS_CLKIN2_INVERTED => '0',
@@ -245,9 +245,9 @@ mmcme4_adv_inst: unisim.vcomponents.MMCME4_ADV
       CLKIN2 => '0',
       CLKINSEL => '1',
       CLKINSTOPPED => NLW_mmcme4_adv_inst_CLKINSTOPPED_UNCONNECTED,
-      CLKOUT0 => clk_out_74MHz_clk_wiz_720p,
+      CLKOUT0 => clk_out_74_25MHz_clk_wiz_720p,
       CLKOUT0B => NLW_mmcme4_adv_inst_CLKOUT0B_UNCONNECTED,
-      CLKOUT1 => clk_out_742MHz_clk_wiz_720p,
+      CLKOUT1 => clk_out_371_25MHz_clk_wiz_720p,
       CLKOUT1B => NLW_mmcme4_adv_inst_CLKOUT1B_UNCONNECTED,
       CLKOUT2 => NLW_mmcme4_adv_inst_CLKOUT2_UNCONNECTED,
       CLKOUT2B => NLW_mmcme4_adv_inst_CLKOUT2B_UNCONNECTED,
@@ -276,7 +276,7 @@ mmcme4_adv_inst: unisim.vcomponents.MMCME4_ADV
       INIT => '0'
     )
         port map (
-      C => clk_out_74MHz_clk_wiz_720p_en_clk,
+      C => clk_out_74_25MHz_clk_wiz_720p_en_clk,
       CE => '1',
       D => \^locked\,
       Q => seq_reg1(0),
@@ -287,7 +287,7 @@ mmcme4_adv_inst: unisim.vcomponents.MMCME4_ADV
       INIT => '0'
     )
         port map (
-      C => clk_out_74MHz_clk_wiz_720p_en_clk,
+      C => clk_out_74_25MHz_clk_wiz_720p_en_clk,
       CE => '1',
       D => seq_reg1(0),
       Q => seq_reg1(1),
@@ -298,7 +298,7 @@ mmcme4_adv_inst: unisim.vcomponents.MMCME4_ADV
       INIT => '0'
     )
         port map (
-      C => clk_out_74MHz_clk_wiz_720p_en_clk,
+      C => clk_out_74_25MHz_clk_wiz_720p_en_clk,
       CE => '1',
       D => seq_reg1(1),
       Q => seq_reg1(2),
@@ -309,7 +309,7 @@ mmcme4_adv_inst: unisim.vcomponents.MMCME4_ADV
       INIT => '0'
     )
         port map (
-      C => clk_out_74MHz_clk_wiz_720p_en_clk,
+      C => clk_out_74_25MHz_clk_wiz_720p_en_clk,
       CE => '1',
       D => seq_reg1(2),
       Q => seq_reg1(3),
@@ -320,7 +320,7 @@ mmcme4_adv_inst: unisim.vcomponents.MMCME4_ADV
       INIT => '0'
     )
         port map (
-      C => clk_out_74MHz_clk_wiz_720p_en_clk,
+      C => clk_out_74_25MHz_clk_wiz_720p_en_clk,
       CE => '1',
       D => seq_reg1(3),
       Q => seq_reg1(4),
@@ -331,7 +331,7 @@ mmcme4_adv_inst: unisim.vcomponents.MMCME4_ADV
       INIT => '0'
     )
         port map (
-      C => clk_out_74MHz_clk_wiz_720p_en_clk,
+      C => clk_out_74_25MHz_clk_wiz_720p_en_clk,
       CE => '1',
       D => seq_reg1(4),
       Q => seq_reg1(5),
@@ -342,7 +342,7 @@ mmcme4_adv_inst: unisim.vcomponents.MMCME4_ADV
       INIT => '0'
     )
         port map (
-      C => clk_out_74MHz_clk_wiz_720p_en_clk,
+      C => clk_out_74_25MHz_clk_wiz_720p_en_clk,
       CE => '1',
       D => seq_reg1(5),
       Q => seq_reg1(6),
@@ -353,7 +353,7 @@ mmcme4_adv_inst: unisim.vcomponents.MMCME4_ADV
       INIT => '0'
     )
         port map (
-      C => clk_out_74MHz_clk_wiz_720p_en_clk,
+      C => clk_out_74_25MHz_clk_wiz_720p_en_clk,
       CE => '1',
       D => seq_reg1(6),
       Q => seq_reg1(7),
@@ -364,7 +364,7 @@ mmcme4_adv_inst: unisim.vcomponents.MMCME4_ADV
       INIT => '0'
     )
         port map (
-      C => clk_out_742MHz_clk_wiz_720p_en_clk,
+      C => clk_out_371_25MHz_clk_wiz_720p_en_clk,
       CE => '1',
       D => \^locked\,
       Q => seq_reg2(0),
@@ -375,7 +375,7 @@ mmcme4_adv_inst: unisim.vcomponents.MMCME4_ADV
       INIT => '0'
     )
         port map (
-      C => clk_out_742MHz_clk_wiz_720p_en_clk,
+      C => clk_out_371_25MHz_clk_wiz_720p_en_clk,
       CE => '1',
       D => seq_reg2(0),
       Q => seq_reg2(1),
@@ -386,7 +386,7 @@ mmcme4_adv_inst: unisim.vcomponents.MMCME4_ADV
       INIT => '0'
     )
         port map (
-      C => clk_out_742MHz_clk_wiz_720p_en_clk,
+      C => clk_out_371_25MHz_clk_wiz_720p_en_clk,
       CE => '1',
       D => seq_reg2(1),
       Q => seq_reg2(2),
@@ -397,7 +397,7 @@ mmcme4_adv_inst: unisim.vcomponents.MMCME4_ADV
       INIT => '0'
     )
         port map (
-      C => clk_out_742MHz_clk_wiz_720p_en_clk,
+      C => clk_out_371_25MHz_clk_wiz_720p_en_clk,
       CE => '1',
       D => seq_reg2(2),
       Q => seq_reg2(3),
@@ -408,7 +408,7 @@ mmcme4_adv_inst: unisim.vcomponents.MMCME4_ADV
       INIT => '0'
     )
         port map (
-      C => clk_out_742MHz_clk_wiz_720p_en_clk,
+      C => clk_out_371_25MHz_clk_wiz_720p_en_clk,
       CE => '1',
       D => seq_reg2(3),
       Q => seq_reg2(4),
@@ -419,7 +419,7 @@ mmcme4_adv_inst: unisim.vcomponents.MMCME4_ADV
       INIT => '0'
     )
         port map (
-      C => clk_out_742MHz_clk_wiz_720p_en_clk,
+      C => clk_out_371_25MHz_clk_wiz_720p_en_clk,
       CE => '1',
       D => seq_reg2(4),
       Q => seq_reg2(5),
@@ -430,7 +430,7 @@ mmcme4_adv_inst: unisim.vcomponents.MMCME4_ADV
       INIT => '0'
     )
         port map (
-      C => clk_out_742MHz_clk_wiz_720p_en_clk,
+      C => clk_out_371_25MHz_clk_wiz_720p_en_clk,
       CE => '1',
       D => seq_reg2(5),
       Q => seq_reg2(6),
@@ -441,7 +441,7 @@ mmcme4_adv_inst: unisim.vcomponents.MMCME4_ADV
       INIT => '0'
     )
         port map (
-      C => clk_out_742MHz_clk_wiz_720p_en_clk,
+      C => clk_out_371_25MHz_clk_wiz_720p_en_clk,
       CE => '1',
       D => seq_reg2(6),
       Q => seq_reg2(7),
@@ -454,8 +454,8 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity clk_wiz_720p is
   port (
-    clk_out_74MHz : out STD_LOGIC;
-    clk_out_742MHz : out STD_LOGIC;
+    clk_out_74_25MHz : out STD_LOGIC;
+    clk_out_371_25MHz : out STD_LOGIC;
     locked : out STD_LOGIC;
     clk : in STD_LOGIC
   );
@@ -468,8 +468,8 @@ begin
 inst: entity work.clk_wiz_720p_clk_wiz
      port map (
       clk => clk,
-      clk_out_742MHz => clk_out_742MHz,
-      clk_out_74MHz => clk_out_74MHz,
+      clk_out_371_25MHz => clk_out_371_25MHz,
+      clk_out_74_25MHz => clk_out_74_25MHz,
       locked => locked
     );
 end STRUCTURE;

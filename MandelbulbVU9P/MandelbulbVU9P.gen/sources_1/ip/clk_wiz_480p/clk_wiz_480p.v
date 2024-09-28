@@ -57,7 +57,7 @@
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
 // clk_out_25MHz__25.00000______0.000______50.0______148.007_____84.520
-// clk_out_250MHz__250.00000______0.000______50.0_______94.797_____84.520
+// clk_out_125MHz__125.00000______0.000______50.0______107.502_____84.520
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -72,7 +72,7 @@ module clk_wiz_480p
  (
   // Clock out ports
   output        clk_out_25MHz,
-  output        clk_out_250MHz,
+  output        clk_out_125MHz,
   // Status and control signals
   output        locked,
  // Clock in ports
@@ -83,7 +83,7 @@ module clk_wiz_480p
   (
   // Clock out ports  
   .clk_out_25MHz(clk_out_25MHz),
-  .clk_out_250MHz(clk_out_250MHz),
+  .clk_out_125MHz(clk_out_125MHz),
   // Status and control signals               
   .locked(locked),
  // Clock in ports
