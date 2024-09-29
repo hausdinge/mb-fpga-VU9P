@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Sun Sep 29 04:29:19 2024
+# Process ID: 4091937
+# Current directory: /shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.runs/synth_1
+# Command line: vivado -log top_display.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_display.tcl
+# Log file: /shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.runs/synth_1/top_display.vds
+# Journal file: /shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.runs/synth_1/vivado.jou
+# Running On: nct-epic, OS: Linux, CPU Frequency: 1200.000 MHz, CPU Physical cores: 32, Host memory: 676201 MB
+#-----------------------------------------------------------
+source top_display.tcl -notrace

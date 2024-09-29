@@ -151,7 +151,7 @@
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT3_OUT_FREQ">99.00000</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT3_PHASE">0.000</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT3_REQUESTED_DUTY_CYCLE">50.000</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT3_REQUESTED_OUT_FREQ">99</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT3_REQUESTED_OUT_FREQ">99.00</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT3_REQUESTED_PHASE">0.000</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT3_SEQUENCE_NUMBER">1</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT3_USED">1</spirit:configurableElementValue>
@@ -245,7 +245,7 @@
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_FILTER_2">0000</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_HAS_CDDC">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_INCLK_SUM_ROW0">Input Clock   Freq (MHz)    Input Jitter (UI)</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_INCLK_SUM_ROW1">__primary_____________300____________0.010</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_INCLK_SUM_ROW1">__primary_________300.000____________0.010</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_INCLK_SUM_ROW2">no_secondary_input_clock </spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_INPUT_CLK_STOPPED_PORT">input_clk_stopped</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_INTERFACE_SELECTION">0</spirit:configurableElementValue>
@@ -362,7 +362,7 @@
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_PRIMARY_PORT">clk</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_PRIMITIVE">MMCM</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_PRIMTYPE_SEL">AUTO</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_PRIM_IN_FREQ">300</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_PRIM_IN_FREQ">300.000</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_PRIM_IN_JITTER">0.010</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_PRIM_IN_TIMEPERIOD">10.000</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_PRIM_SOURCE">Single_ended_clock_capable_pin</spirit:configurableElementValue>
@@ -455,7 +455,7 @@
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CLKOUT3_MATCHED_ROUTING">false</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CLKOUT3_PHASE_ERROR">123.723</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CLKOUT3_REQUESTED_DUTY_CYCLE">50.000</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CLKOUT3_REQUESTED_OUT_FREQ">99</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CLKOUT3_REQUESTED_OUT_FREQ">99.00</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CLKOUT3_REQUESTED_PHASE">0.000</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CLKOUT3_SEQUENCE_NUMBER">1</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CLKOUT3_USED">true</spirit:configurableElementValue>
@@ -624,7 +624,7 @@
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PRIMARY_PORT">clk</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PRIMITIVE">MMCM</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PRIMTYPE_SEL">mmcm_adv</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PRIM_IN_FREQ">300</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PRIM_IN_FREQ">300.000</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PRIM_IN_JITTER">0.010</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PRIM_IN_TIMEPERIOD">10.000</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PRIM_SOURCE">Single_ended_clock_capable_pin</spirit:configurableElementValue>

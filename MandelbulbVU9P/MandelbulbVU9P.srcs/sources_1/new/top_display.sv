@@ -45,7 +45,7 @@ output logic TMDS_shift_blue0, TMDS_shift_blue1       // or something else that 
 
 ////////////////////////////////////////////////////////////////////////
 
-  logic clk_100Mhz;
+  logic clk_100MHz;
 
   logic locked;
 
@@ -102,7 +102,7 @@ output logic TMDS_shift_blue0, TMDS_shift_blue1       // or something else that 
   );*/
   
   // Uncomment when 720p is used, comment out if 480p is used
-  clk_wiz_720p serial_and_pix_clk(
+  clk_wiz_720p serial_and_pix_clks(
     .clk_out_74_25MHz(pix_clk),     
     .clk_out_371_25MHz(pix_clk_5x), 
     .clk_out_100MHz(clk_100MHz),    
@@ -179,7 +179,7 @@ output logic TMDS_shift_blue0, TMDS_shift_blue1       // or something else that 
   logic [19:0] framebuffer_addr;
     
   ray_march raymarcher (
-    .clk(clk_100Mhz), 
+    .clk(clk_100MHz), 
     .BTNC(btnc), 
     .BTNU(btnu), 
     .BTND(btnd), 
@@ -197,7 +197,7 @@ output logic TMDS_shift_blue0, TMDS_shift_blue1       // or something else that 
     .V_RES(720)
   ) 
   bth (
-    .clk(clk_100Mhz),
+    .clk(clk_100MHz),
     .pix_clk(pix_clk),
     .lock(!locked),
     .i_x(x),
