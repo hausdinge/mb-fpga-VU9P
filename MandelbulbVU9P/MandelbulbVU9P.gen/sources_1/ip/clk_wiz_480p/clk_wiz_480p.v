@@ -56,23 +56,25 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// clk_out_25MHz__25.00000______0.000______50.0______148.007_____84.520
-// clk_out_125MHz__125.00000______0.000______50.0______107.502_____84.520
+// clk_out_25MHz__25.00000______0.000______50.0______170.432_____98.575
+// clk_out_125MHz__125.00000______0.000______50.0______124.191_____98.575
+// clk_out_100MHz__100.00000______0.000______50.0______129.666_____98.575
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
 //----------------------------------------------------------------------------
-// __primary_________100.000____________0.010
+// __primary_________300.000____________0.010
 
 `timescale 1ps/1ps
 
-(* CORE_GENERATION_INFO = "clk_wiz_480p,clk_wiz_v6_0_9_0_0,{component_name=clk_wiz_480p,use_phase_alignment=true,use_min_o_jitter=false,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,enable_axi=0,feedback_source=FDBK_AUTO,PRIMITIVE=MMCM,num_out_clk=2,clkin1_period=10.000,clkin2_period=10.000,use_power_down=false,use_reset=false,use_locked=true,use_inclk_stopped=false,feedback_type=SINGLE,CLOCK_MGR_TYPE=NA,manual_override=false}" *)
+(* CORE_GENERATION_INFO = "clk_wiz_480p,clk_wiz_v6_0_9_0_0,{component_name=clk_wiz_480p,use_phase_alignment=true,use_min_o_jitter=false,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,enable_axi=0,feedback_source=FDBK_AUTO,PRIMITIVE=MMCM,num_out_clk=3,clkin1_period=3.333,clkin2_period=10.0,use_power_down=false,use_reset=false,use_locked=true,use_inclk_stopped=false,feedback_type=SINGLE,CLOCK_MGR_TYPE=NA,manual_override=false}" *)
 
 module clk_wiz_480p 
  (
   // Clock out ports
   output        clk_out_25MHz,
   output        clk_out_125MHz,
+  output        clk_out_100MHz,
   // Status and control signals
   output        locked,
  // Clock in ports
@@ -84,6 +86,7 @@ module clk_wiz_480p
   // Clock out ports  
   .clk_out_25MHz(clk_out_25MHz),
   .clk_out_125MHz(clk_out_125MHz),
+  .clk_out_100MHz(clk_out_100MHz),
   // Status and control signals               
   .locked(locked),
  // Clock in ports

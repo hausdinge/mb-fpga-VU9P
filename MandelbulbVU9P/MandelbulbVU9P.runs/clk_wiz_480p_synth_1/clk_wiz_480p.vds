@@ -2,8 +2,8 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Sat Sep 28 22:31:57 2024
-# Process ID: 3832404
+# Start of session at: Sun Sep 29 02:04:15 2024
+# Process ID: 3973351
 # Current directory: /shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.runs/clk_wiz_480p_synth_1
 # Command line: vivado -log clk_wiz_480p.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source clk_wiz_480p.tcl
 # Log file: /shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.runs/clk_wiz_480p_synth_1/clk_wiz_480p.vds
@@ -11,7 +11,7 @@
 # Running On: nct-epic, OS: Linux, CPU Frequency: 1200.000 MHz, CPU Physical cores: 32, Host memory: 676201 MB
 #-----------------------------------------------------------
 source clk_wiz_480p.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2690.293 ; gain = 0.000 ; free physical = 615027 ; free virtual = 642454
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2690.297 ; gain = 0.000 ; free physical = 613971 ; free virtual = 641459
 Command: synth_design -top clk_wiz_480p -part xcvu9p-flga2104-2L-e -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xcvu9p'
@@ -19,52 +19,56 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcvu9p'
 INFO: [Device 21-403] Loading part xcvu9p-flga2104-2L-e
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 3832902
+INFO: [Synth 8-7075] Helper process launched with PID 3973895
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3199.898 ; gain = 298.766 ; free physical = 612980 ; free virtual = 640428
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3199.902 ; gain = 298.766 ; free physical = 612505 ; free virtual = 639992
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_480p' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.gen/sources_1/ip/clk_wiz_480p/clk_wiz_480p.v:71]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_480p_clk_wiz' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.gen/sources_1/ip/clk_wiz_480p/clk_wiz_480p_clk_wiz.v:69]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_480p' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.gen/sources_1/ip/clk_wiz_480p/clk_wiz_480p.v:72]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_480p_clk_wiz' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.gen/sources_1/ip/clk_wiz_480p/clk_wiz_480p_clk_wiz.v:70]
 INFO: [Synth 8-6157] synthesizing module 'IBUF' [/shares/nct-opt/software/xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:55204]
 INFO: [Synth 8-6155] done synthesizing module 'IBUF' (1#1) [/shares/nct-opt/software/xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:55204]
 INFO: [Synth 8-6157] synthesizing module 'MMCME4_ADV' [/shares/nct-opt/software/xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:63903]
 	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
-	Parameter CLKFBOUT_MULT_F bound to: 12.500000 - type: double 
+	Parameter CLKFBOUT_MULT_F bound to: 10.000000 - type: double 
 	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
 	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
-	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: double 
-	Parameter CLKOUT0_DIVIDE_F bound to: 50.000000 - type: double 
+	Parameter CLKIN1_PERIOD bound to: 3.333000 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 40.000000 - type: double 
 	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
 	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
 	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
-	Parameter CLKOUT1_DIVIDE bound to: 10 - type: integer 
+	Parameter CLKOUT1_DIVIDE bound to: 8 - type: integer 
 	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: double 
 	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: double 
 	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT2_DIVIDE bound to: 10 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT2_USE_FINE_PS bound to: FALSE - type: string 
 	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
 	Parameter COMPENSATION bound to: AUTO - type: string 
-	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter DIVCLK_DIVIDE bound to: 3 - type: integer 
 	Parameter STARTUP_WAIT bound to: FALSE - type: string 
 INFO: [Synth 8-6155] done synthesizing module 'MMCME4_ADV' (2#1) [/shares/nct-opt/software/xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:63903]
 INFO: [Synth 8-6157] synthesizing module 'BUFG' [/shares/nct-opt/software/xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:1083]
 INFO: [Synth 8-6155] done synthesizing module 'BUFG' (3#1) [/shares/nct-opt/software/xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:1083]
 INFO: [Synth 8-6157] synthesizing module 'BUFGCE' [/shares/nct-opt/software/xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:1093]
 INFO: [Synth 8-6155] done synthesizing module 'BUFGCE' (4#1) [/shares/nct-opt/software/xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:1093]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_480p_clk_wiz' (5#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.gen/sources_1/ip/clk_wiz_480p/clk_wiz_480p_clk_wiz.v:69]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_480p' (6#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.gen/sources_1/ip/clk_wiz_480p/clk_wiz_480p.v:71]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_480p_clk_wiz' (5#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.gen/sources_1/ip/clk_wiz_480p/clk_wiz_480p_clk_wiz.v:70]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_480p' (6#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.gen/sources_1/ip/clk_wiz_480p/clk_wiz_480p.v:72]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3253.867 ; gain = 352.734 ; free physical = 612608 ; free virtual = 640062
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3253.871 ; gain = 352.734 ; free physical = 611567 ; free virtual = 639056
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 3271.680 ; gain = 370.547 ; free physical = 613500 ; free virtual = 640955
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 3271.684 ; gain = 370.547 ; free physical = 612444 ; free virtual = 639932
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 3271.680 ; gain = 370.547 ; free physical = 613500 ; free virtual = 640955
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 3271.684 ; gain = 370.547 ; free physical = 612444 ; free virtual = 639932
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3277.617 ; gain = 0.000 ; free physical = 613526 ; free virtual = 640981
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3277.621 ; gain = 0.000 ; free physical = 612482 ; free virtual = 639971
 INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -76,7 +80,7 @@ Finished Parsing XDC File [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9
 Parsing XDC File [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.gen/sources_1/ip/clk_wiz_480p/clk_wiz_480p_board.xdc] for cell 'inst'
 Finished Parsing XDC File [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.gen/sources_1/ip/clk_wiz_480p/clk_wiz_480p_board.xdc] for cell 'inst'
 Parsing XDC File [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.gen/sources_1/ip/clk_wiz_480p/clk_wiz_480p.xdc] for cell 'inst'
-create_clock: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3412.273 ; gain = 0.000 ; free physical = 613394 ; free virtual = 640864
+create_clock: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3424.277 ; gain = 0.000 ; free physical = 612405 ; free virtual = 639893
 Finished Parsing XDC File [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.gen/sources_1/ip/clk_wiz_480p/clk_wiz_480p.xdc] for cell 'inst'
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.gen/sources_1/ip/clk_wiz_480p/clk_wiz_480p.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/clk_wiz_480p_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/clk_wiz_480p_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
@@ -87,15 +91,15 @@ Parsing XDC File [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/Mandelb
 Finished Parsing XDC File [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.gen/sources_1/ip/clk_wiz_480p/clk_wiz_480p_late.xdc] for cell 'inst'
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3412.273 ; gain = 0.000 ; free physical = 613396 ; free virtual = 640866
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3424.277 ; gain = 0.000 ; free physical = 612404 ; free virtual = 639893
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   BUFG => BUFGCE: 1 instance 
   IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3412.273 ; gain = 0.000 ; free physical = 613394 ; free virtual = 640866
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3424.277 ; gain = 0.000 ; free physical = 612405 ; free virtual = 639893
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 3412.273 ; gain = 511.141 ; free physical = 613518 ; free virtual = 640989
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 3424.277 ; gain = 523.141 ; free physical = 612507 ; free virtual = 639996
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -103,24 +107,24 @@ Start Loading Part and Timing Information
 Loading part: xcvu9p-flga2104-2L-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 3412.273 ; gain = 511.141 ; free physical = 613518 ; free virtual = 640989
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 3424.277 ; gain = 523.141 ; free physical = 612509 ; free virtual = 639998
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.runs/clk_wiz_480p_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 3412.273 ; gain = 511.141 ; free physical = 613518 ; free virtual = 640989
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 3424.277 ; gain = 523.141 ; free physical = 612512 ; free virtual = 640001
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 3412.273 ; gain = 511.141 ; free physical = 613516 ; free virtual = 640988
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 3424.277 ; gain = 523.141 ; free physical = 612513 ; free virtual = 640002
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Registers : 
-	                8 Bit    Registers := 2     
+	                8 Bit    Registers := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -138,25 +142,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 3412.273 ; gain = 511.141 ; free physical = 613515 ; free virtual = 640993
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 3424.277 ; gain = 523.141 ; free physical = 612511 ; free virtual = 640003
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:34 . Memory (MB): peak = 3641.195 ; gain = 740.062 ; free physical = 613048 ; free virtual = 640534
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 3640.512 ; gain = 739.375 ; free physical = 612034 ; free virtual = 639527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:34 . Memory (MB): peak = 3641.195 ; gain = 740.062 ; free physical = 613045 ; free virtual = 640532
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 3640.512 ; gain = 739.375 ; free physical = 612034 ; free virtual = 639526
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:34 . Memory (MB): peak = 3660.227 ; gain = 759.094 ; free physical = 613035 ; free virtual = 640522
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 3659.543 ; gain = 758.406 ; free physical = 612025 ; free virtual = 639518
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -174,37 +178,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:38 . Memory (MB): peak = 3666.164 ; gain = 765.031 ; free physical = 613045 ; free virtual = 640532
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 3665.480 ; gain = 764.344 ; free physical = 612033 ; free virtual = 639525
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:38 . Memory (MB): peak = 3666.164 ; gain = 765.031 ; free physical = 613045 ; free virtual = 640532
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 3665.480 ; gain = 764.344 ; free physical = 612033 ; free virtual = 639525
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:38 . Memory (MB): peak = 3666.164 ; gain = 765.031 ; free physical = 613045 ; free virtual = 640532
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 3665.480 ; gain = 764.344 ; free physical = 612033 ; free virtual = 639525
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:38 . Memory (MB): peak = 3666.164 ; gain = 765.031 ; free physical = 613045 ; free virtual = 640532
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 3665.480 ; gain = 764.344 ; free physical = 612033 ; free virtual = 639525
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:38 . Memory (MB): peak = 3666.164 ; gain = 765.031 ; free physical = 613045 ; free virtual = 640532
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 3665.480 ; gain = 764.344 ; free physical = 612033 ; free virtual = 639525
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:38 . Memory (MB): peak = 3666.164 ; gain = 765.031 ; free physical = 613045 ; free virtual = 640532
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 3665.480 ; gain = 764.344 ; free physical = 612033 ; free virtual = 639525
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -221,36 +225,36 @@ Report Cell Usage:
 |      |Cell       |Count |
 +------+-----------+------+
 |1     |BUFG       |     1|
-|2     |BUFGCE     |     4|
+|2     |BUFGCE     |     6|
 |3     |MMCME4_ADV |     1|
-|4     |FDRE       |    16|
+|4     |FDRE       |    24|
 |5     |IBUF       |     1|
 +------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:38 . Memory (MB): peak = 3666.164 ; gain = 765.031 ; free physical = 613045 ; free virtual = 640532
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 3665.480 ; gain = 764.344 ; free physical = 612033 ; free virtual = 639525
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:30 . Memory (MB): peak = 3666.164 ; gain = 624.438 ; free physical = 613070 ; free virtual = 640557
-Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:38 . Memory (MB): peak = 3666.172 ; gain = 765.031 ; free physical = 613070 ; free virtual = 640557
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 3665.480 ; gain = 611.750 ; free physical = 612060 ; free virtual = 639552
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 3665.488 ; gain = 764.344 ; free physical = 612054 ; free virtual = 639547
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3666.172 ; gain = 0.000 ; free physical = 613128 ; free virtual = 640615
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3665.488 ; gain = 0.000 ; free physical = 612124 ; free virtual = 639617
 INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3742.141 ; gain = 0.000 ; free physical = 613084 ; free virtual = 640571
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3742.434 ; gain = 0.000 ; free physical = 612068 ; free virtual = 639561
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   BUFG => BUFGCE: 1 instance 
   IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
 
-Synth Design complete, checksum: 9e5df7c6
+Synth Design complete, checksum: 8e6056ce
 INFO: [Common 17-83] Releasing license: Synthesis
 31 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:48 ; elapsed = 00:00:54 . Memory (MB): peak = 3742.141 ; gain = 1051.848 ; free physical = 613270 ; free virtual = 640758
+synth_design: Time (s): cpu = 00:00:48 ; elapsed = 00:00:52 . Memory (MB): peak = 3742.434 ; gain = 1052.137 ; free physical = 612261 ; free virtual = 639754
 INFO: [Common 17-1381] The checkpoint '/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.runs/clk_wiz_480p_synth_1/clk_wiz_480p.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP clk_wiz_480p, cache-ID = b2c25f943d93b53f
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP clk_wiz_480p, cache-ID = b78340bd22685031
 INFO: [Common 17-1381] The checkpoint '/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.runs/clk_wiz_480p_synth_1/clk_wiz_480p.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file clk_wiz_480p_utilization_synth.rpt -pb clk_wiz_480p_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Sep 28 22:33:27 2024...
+INFO: [Common 17-206] Exiting Vivado at Sun Sep 29 02:05:44 2024...

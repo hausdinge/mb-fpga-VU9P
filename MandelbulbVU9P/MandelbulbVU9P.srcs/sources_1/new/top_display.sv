@@ -18,7 +18,7 @@ that implements the TMDS_ODDR_converter module.
 
 
 module top_display(
-input logic clk,                                      // 100 MHz
+input logic clk,                                      // 300 MHz
 input logic btnc, btnd, btnl, btnr, btnu, sw0, sw1,   // Buttons to move the Mandelbulb
 output logic o_pix_clk, o_pix_clk_5x,                 // Output clks needed for the TMDS_ODDR_converter module
 output logic TMDS_shift_red0, TMDS_shift_red1,        // Splitted colore data -> only 5x the pix_clk. This data
@@ -44,6 +44,8 @@ output logic TMDS_shift_blue0, TMDS_shift_blue1       // or something else that 
   // clk_TDMS = 5 x pix_clk = 371.25 MHz
 
 ////////////////////////////////////////////////////////////////////////
+
+  logic clk_100Mhz;
 
   logic locked;
 
@@ -93,7 +95,8 @@ output logic TMDS_shift_blue0, TMDS_shift_blue1       // or something else that 
   // Uncomment when 480p is used, comment out if 720p is used
   /*clk_wiz_480p serial_and_pix_clk(
     .clk_out_25MHz(pix_clk),    
-    .clk_out_125MHz(pix_clk_5x),      
+    .clk_out_125MHz(pix_clk_5x),
+    .clk_out_100MHz(clk_100MHz),      
     .clk(clk),    
     .locked(locked)
   );*/
@@ -101,7 +104,8 @@ output logic TMDS_shift_blue0, TMDS_shift_blue1       // or something else that 
   // Uncomment when 720p is used, comment out if 480p is used
   clk_wiz_720p serial_and_pix_clk(
     .clk_out_74_25MHz(pix_clk),     
-    .clk_out_371_25MHz(pix_clk_5x),     
+    .clk_out_371_25MHz(pix_clk_5x), 
+    .clk_out_100MHz(clk_100MHz),    
     .clk(clk),
     .locked(locked)  
   );
@@ -175,7 +179,7 @@ output logic TMDS_shift_blue0, TMDS_shift_blue1       // or something else that 
   logic [19:0] framebuffer_addr;
     
   ray_march raymarcher (
-    .clk(clk), 
+    .clk(clk_100Mhz), 
     .BTNC(btnc), 
     .BTNU(btnu), 
     .BTND(btnd), 
@@ -193,7 +197,7 @@ output logic TMDS_shift_blue0, TMDS_shift_blue1       // or something else that 
     .V_RES(720)
   ) 
   bth (
-    .clk(clk),
+    .clk(clk_100Mhz),
     .pix_clk(pix_clk),
     .lock(!locked),
     .i_x(x),

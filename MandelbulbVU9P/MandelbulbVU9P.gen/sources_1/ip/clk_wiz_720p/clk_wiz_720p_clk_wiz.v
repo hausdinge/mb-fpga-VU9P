@@ -56,13 +56,14 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// clk_out_74_25MHz__74.25000______0.000______50.0______250.227____394.762
-// clk_out_371_25MHz__371.25000______0.000______50.0______203.119____394.762
+// clk_out_74_25MHz__74.25000______0.000______50.0______109.443____123.723
+// clk_out_371_25MHz__371.25000______0.000______50.0_______83.177____123.723
+// clk_out_100MHz__99.00000______0.000______50.0______104.182____123.723
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
 //----------------------------------------------------------------------------
-// __primary_________100.000____________0.010
+// __primary_____________300____________0.010
 
 `timescale 1ps/1ps
 
@@ -72,6 +73,7 @@ module clk_wiz_720p_clk_wiz
   // Clock out ports
   output        clk_out_74_25MHz,
   output        clk_out_371_25MHz,
+  output        clk_out_100MHz,
   // Status and control signals
   output        locked,
   input         clk
@@ -96,7 +98,7 @@ wire clk_in2_clk_wiz_720p;
 
   wire        clk_out_74_25MHz_clk_wiz_720p;
   wire        clk_out_371_25MHz_clk_wiz_720p;
-  wire        clk_out3_clk_wiz_720p;
+  wire        clk_out_100MHz_clk_wiz_720p;
   wire        clk_out4_clk_wiz_720p;
   wire        clk_out5_clk_wiz_720p;
   wire        clk_out6_clk_wiz_720p;
@@ -111,7 +113,6 @@ wire clk_in2_clk_wiz_720p;
   wire        clkfboutb_unused;
     wire clkout0b_unused;
    wire clkout1b_unused;
-   wire clkout2_unused;
    wire clkout2b_unused;
    wire clkout3_unused;
    wire clkout3b_unused;
@@ -126,6 +127,9 @@ wire clk_in2_clk_wiz_720p;
   (* KEEP = "TRUE" *) 
   (* ASYNC_REG = "TRUE" *)
   reg  [7 :0] seq_reg2 = 0;
+  (* KEEP = "TRUE" *) 
+  (* ASYNC_REG = "TRUE" *)
+  reg  [7 :0] seq_reg3 = 0;
 
 
   
@@ -135,19 +139,23 @@ wire clk_in2_clk_wiz_720p;
     .CLKOUT4_CASCADE      ("FALSE"),
     .COMPENSATION         ("AUTO"),
     .STARTUP_WAIT         ("FALSE"),
-    .DIVCLK_DIVIDE        (10),
-    .CLKFBOUT_MULT_F      (111.375),
+    .DIVCLK_DIVIDE        (5),
+    .CLKFBOUT_MULT_F      (24.750),
     .CLKFBOUT_PHASE       (0.000),
     .CLKFBOUT_USE_FINE_PS ("FALSE"),
-    .CLKOUT0_DIVIDE_F     (15.000),
+    .CLKOUT0_DIVIDE_F     (20.000),
     .CLKOUT0_PHASE        (0.000),
     .CLKOUT0_DUTY_CYCLE   (0.500),
     .CLKOUT0_USE_FINE_PS  ("FALSE"),
-    .CLKOUT1_DIVIDE       (3),
+    .CLKOUT1_DIVIDE       (4),
     .CLKOUT1_PHASE        (0.000),
     .CLKOUT1_DUTY_CYCLE   (0.500),
     .CLKOUT1_USE_FINE_PS  ("FALSE"),
-    .CLKIN1_PERIOD        (10.000))
+    .CLKOUT2_DIVIDE       (15),
+    .CLKOUT2_PHASE        (0.000),
+    .CLKOUT2_DUTY_CYCLE   (0.500),
+    .CLKOUT2_USE_FINE_PS  ("FALSE"),
+    .CLKIN1_PERIOD        (3.333))
   
   mmcme4_adv_inst
     // Output clocks
@@ -158,7 +166,7 @@ wire clk_in2_clk_wiz_720p;
     .CLKOUT0B            (clkout0b_unused),
     .CLKOUT1             (clk_out_371_25MHz_clk_wiz_720p),
     .CLKOUT1B            (clkout1b_unused),
-    .CLKOUT2             (clkout2_unused),
+    .CLKOUT2             (clk_out_100MHz_clk_wiz_720p),
     .CLKOUT2B            (clkout2b_unused),
     .CLKOUT3             (clkout3_unused),
     .CLKOUT3B            (clkout3b_unused),
@@ -234,6 +242,20 @@ wire clk_in2_clk_wiz_720p;
  
   always @(posedge clk_out_371_25MHz_clk_wiz_720p_en_clk)
         seq_reg2 <= {seq_reg2[6:0],locked_int};
+
+
+  BUFGCE clkout3_buf
+   (.O   (clk_out_100MHz),
+    .CE  (seq_reg3[7]),
+    .I   (clk_out_100MHz_clk_wiz_720p));
+ 
+  BUFGCE clkout3_buf_en
+   (.O   (clk_out_100MHz_clk_wiz_720p_en_clk),
+    .CE  (1'b1),
+    .I   (clk_out_100MHz_clk_wiz_720p));
+ 
+  always @(posedge clk_out_100MHz_clk_wiz_720p_en_clk)
+        seq_reg3 <= {seq_reg3[6:0],locked_int};
 
 
 

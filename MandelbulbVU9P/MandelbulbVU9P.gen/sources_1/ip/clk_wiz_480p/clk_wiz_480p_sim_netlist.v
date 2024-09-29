@@ -1,7 +1,7 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-// Date        : Sat Sep 28 22:33:26 2024
+// Date        : Sun Sep 29 02:05:43 2024
 // Host        : nct-epic running 64-bit Debian GNU/Linux 12 (bookworm)
 // Command     : write_verilog -force -mode funcsim
 //               /shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.gen/sources_1/ip/clk_wiz_480p/clk_wiz_480p_sim_netlist.v
@@ -16,20 +16,24 @@
 module clk_wiz_480p
    (clk_out_25MHz,
     clk_out_125MHz,
+    clk_out_100MHz,
     locked,
     clk);
   output clk_out_25MHz;
   output clk_out_125MHz;
+  output clk_out_100MHz;
   output locked;
   input clk;
 
   (* IBUF_LOW_PWR *) wire clk;
+  wire clk_out_100MHz;
   wire clk_out_125MHz;
   wire clk_out_25MHz;
   wire locked;
 
   clk_wiz_480p_clk_wiz inst
        (.clk(clk),
+        .clk_out_100MHz(clk_out_100MHz),
         .clk_out_125MHz(clk_out_125MHz),
         .clk_out_25MHz(clk_out_25MHz),
         .locked(locked));
@@ -38,15 +42,20 @@ endmodule
 module clk_wiz_480p_clk_wiz
    (clk_out_25MHz,
     clk_out_125MHz,
+    clk_out_100MHz,
     locked,
     clk);
   output clk_out_25MHz;
   output clk_out_125MHz;
+  output clk_out_100MHz;
   output locked;
   input clk;
 
   wire clk;
   wire clk_clk_wiz_480p;
+  wire clk_out_100MHz;
+  wire clk_out_100MHz_clk_wiz_480p;
+  wire clk_out_100MHz_clk_wiz_480p_en_clk;
   wire clk_out_125MHz;
   wire clk_out_125MHz_clk_wiz_480p;
   wire clk_out_125MHz_clk_wiz_480p_en_clk;
@@ -58,13 +67,13 @@ module clk_wiz_480p_clk_wiz
   wire locked;
   (* RTL_KEEP = "true" *) (* async_reg = "true" *) wire [7:0]seq_reg1;
   (* RTL_KEEP = "true" *) (* async_reg = "true" *) wire [7:0]seq_reg2;
+  (* RTL_KEEP = "true" *) (* async_reg = "true" *) wire [7:0]seq_reg3;
   wire NLW_mmcme4_adv_inst_CDDCDONE_UNCONNECTED;
   wire NLW_mmcme4_adv_inst_CLKFBOUTB_UNCONNECTED;
   wire NLW_mmcme4_adv_inst_CLKFBSTOPPED_UNCONNECTED;
   wire NLW_mmcme4_adv_inst_CLKINSTOPPED_UNCONNECTED;
   wire NLW_mmcme4_adv_inst_CLKOUT0B_UNCONNECTED;
   wire NLW_mmcme4_adv_inst_CLKOUT1B_UNCONNECTED;
-  wire NLW_mmcme4_adv_inst_CLKOUT2_UNCONNECTED;
   wire NLW_mmcme4_adv_inst_CLKOUT2B_UNCONNECTED;
   wire NLW_mmcme4_adv_inst_CLKOUT3_UNCONNECTED;
   wire NLW_mmcme4_adv_inst_CLKOUT3B_UNCONNECTED;
@@ -139,22 +148,44 @@ module clk_wiz_480p_clk_wiz
         .I(clk_out_125MHz_clk_wiz_480p),
         .O(clk_out_125MHz_clk_wiz_480p_en_clk));
   (* BOX_TYPE = "PRIMITIVE" *) 
+  BUFGCE #(
+    .CE_TYPE("SYNC"),
+    .IS_CE_INVERTED(1'b0),
+    .IS_I_INVERTED(1'b0),
+    .SIM_DEVICE("ULTRASCALE"),
+    .STARTUP_SYNC("FALSE")) 
+    clkout3_buf
+       (.CE(seq_reg3[7]),
+        .I(clk_out_100MHz_clk_wiz_480p),
+        .O(clk_out_100MHz));
+  (* BOX_TYPE = "PRIMITIVE" *) 
+  BUFGCE #(
+    .CE_TYPE("SYNC"),
+    .IS_CE_INVERTED(1'b0),
+    .IS_I_INVERTED(1'b0),
+    .SIM_DEVICE("ULTRASCALE"),
+    .STARTUP_SYNC("FALSE")) 
+    clkout3_buf_en
+       (.CE(1'b1),
+        .I(clk_out_100MHz_clk_wiz_480p),
+        .O(clk_out_100MHz_clk_wiz_480p_en_clk));
+  (* BOX_TYPE = "PRIMITIVE" *) 
   MMCME4_ADV #(
     .BANDWIDTH("OPTIMIZED"),
-    .CLKFBOUT_MULT_F(12.500000),
+    .CLKFBOUT_MULT_F(10.000000),
     .CLKFBOUT_PHASE(0.000000),
     .CLKFBOUT_USE_FINE_PS("FALSE"),
-    .CLKIN1_PERIOD(10.000000),
+    .CLKIN1_PERIOD(3.333000),
     .CLKIN2_PERIOD(0.000000),
-    .CLKOUT0_DIVIDE_F(50.000000),
+    .CLKOUT0_DIVIDE_F(40.000000),
     .CLKOUT0_DUTY_CYCLE(0.500000),
     .CLKOUT0_PHASE(0.000000),
     .CLKOUT0_USE_FINE_PS("FALSE"),
-    .CLKOUT1_DIVIDE(10),
+    .CLKOUT1_DIVIDE(8),
     .CLKOUT1_DUTY_CYCLE(0.500000),
     .CLKOUT1_PHASE(0.000000),
     .CLKOUT1_USE_FINE_PS("FALSE"),
-    .CLKOUT2_DIVIDE(1),
+    .CLKOUT2_DIVIDE(10),
     .CLKOUT2_DUTY_CYCLE(0.500000),
     .CLKOUT2_PHASE(0.000000),
     .CLKOUT2_USE_FINE_PS("FALSE"),
@@ -176,7 +207,7 @@ module clk_wiz_480p_clk_wiz
     .CLKOUT6_PHASE(0.000000),
     .CLKOUT6_USE_FINE_PS("FALSE"),
     .COMPENSATION("ZHOLD"),
-    .DIVCLK_DIVIDE(1),
+    .DIVCLK_DIVIDE(3),
     .IS_CLKFBIN_INVERTED(1'b0),
     .IS_CLKIN1_INVERTED(1'b0),
     .IS_CLKIN2_INVERTED(1'b0),
@@ -206,7 +237,7 @@ module clk_wiz_480p_clk_wiz
         .CLKOUT0B(NLW_mmcme4_adv_inst_CLKOUT0B_UNCONNECTED),
         .CLKOUT1(clk_out_125MHz_clk_wiz_480p),
         .CLKOUT1B(NLW_mmcme4_adv_inst_CLKOUT1B_UNCONNECTED),
-        .CLKOUT2(NLW_mmcme4_adv_inst_CLKOUT2_UNCONNECTED),
+        .CLKOUT2(clk_out_100MHz_clk_wiz_480p),
         .CLKOUT2B(NLW_mmcme4_adv_inst_CLKOUT2B_UNCONNECTED),
         .CLKOUT3(NLW_mmcme4_adv_inst_CLKOUT3_UNCONNECTED),
         .CLKOUT3B(NLW_mmcme4_adv_inst_CLKOUT3B_UNCONNECTED),
@@ -386,6 +417,86 @@ module clk_wiz_480p_clk_wiz
         .CE(1'b1),
         .D(seq_reg2[6]),
         .Q(seq_reg2[7]),
+        .R(1'b0));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \seq_reg3_reg[0] 
+       (.C(clk_out_100MHz_clk_wiz_480p_en_clk),
+        .CE(1'b1),
+        .D(locked),
+        .Q(seq_reg3[0]),
+        .R(1'b0));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \seq_reg3_reg[1] 
+       (.C(clk_out_100MHz_clk_wiz_480p_en_clk),
+        .CE(1'b1),
+        .D(seq_reg3[0]),
+        .Q(seq_reg3[1]),
+        .R(1'b0));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \seq_reg3_reg[2] 
+       (.C(clk_out_100MHz_clk_wiz_480p_en_clk),
+        .CE(1'b1),
+        .D(seq_reg3[1]),
+        .Q(seq_reg3[2]),
+        .R(1'b0));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \seq_reg3_reg[3] 
+       (.C(clk_out_100MHz_clk_wiz_480p_en_clk),
+        .CE(1'b1),
+        .D(seq_reg3[2]),
+        .Q(seq_reg3[3]),
+        .R(1'b0));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \seq_reg3_reg[4] 
+       (.C(clk_out_100MHz_clk_wiz_480p_en_clk),
+        .CE(1'b1),
+        .D(seq_reg3[3]),
+        .Q(seq_reg3[4]),
+        .R(1'b0));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \seq_reg3_reg[5] 
+       (.C(clk_out_100MHz_clk_wiz_480p_en_clk),
+        .CE(1'b1),
+        .D(seq_reg3[4]),
+        .Q(seq_reg3[5]),
+        .R(1'b0));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \seq_reg3_reg[6] 
+       (.C(clk_out_100MHz_clk_wiz_480p_en_clk),
+        .CE(1'b1),
+        .D(seq_reg3[5]),
+        .Q(seq_reg3[6]),
+        .R(1'b0));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \seq_reg3_reg[7] 
+       (.C(clk_out_100MHz_clk_wiz_480p_en_clk),
+        .CE(1'b1),
+        .D(seq_reg3[6]),
+        .Q(seq_reg3[7]),
         .R(1'b0));
 endmodule
 `ifndef GLBL
