@@ -71,6 +71,7 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param power.enableUnconnectedCarry8PinPower 1
+set_param chipscope.maxJobs 32
 set_param power.enableCarry8RouteBelPower 1
 set_param power.BramSDPPropagationFix 1
 set_param power.enableLutRouteBelPower 1

@@ -1,7 +1,7 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
--- Date        : Sun Sep 29 02:05:43 2024
+-- Date        : Mon Sep 30 03:30:50 2024
 -- Host        : nct-epic running 64-bit Debian GNU/Linux 12 (bookworm)
 -- Command     : write_vhdl -force -mode funcsim
 --               /shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.gen/sources_1/ip/clk_wiz_480p/clk_wiz_480p_sim_netlist.vhdl
@@ -232,10 +232,10 @@ clkout3_buf_en: unisim.vcomponents.BUFGCE
 mmcme4_adv_inst: unisim.vcomponents.MMCME4_ADV
     generic map(
       BANDWIDTH => "OPTIMIZED",
-      CLKFBOUT_MULT_F => 10.000000,
+      CLKFBOUT_MULT_F => 100.000000,
       CLKFBOUT_PHASE => 0.000000,
       CLKFBOUT_USE_FINE_PS => "FALSE",
-      CLKIN1_PERIOD => 3.333000,
+      CLKIN1_PERIOD => 11.111000,
       CLKIN2_PERIOD => 0.000000,
       CLKOUT0_DIVIDE_F => 40.000000,
       CLKOUT0_DUTY_CYCLE => 0.500000,
@@ -267,7 +267,7 @@ mmcme4_adv_inst: unisim.vcomponents.MMCME4_ADV
       CLKOUT6_PHASE => 0.000000,
       CLKOUT6_USE_FINE_PS => "FALSE",
       COMPENSATION => "ZHOLD",
-      DIVCLK_DIVIDE => 3,
+      DIVCLK_DIVIDE => 9,
       IS_CLKFBIN_INVERTED => '0',
       IS_CLKIN1_INVERTED => '0',
       IS_CLKIN2_INVERTED => '0',

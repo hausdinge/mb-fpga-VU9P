@@ -18,14 +18,23 @@ that implements the TMDS_ODDR_converter module.
 
 
 module top_display(
-input logic clk,                                      // 300 MHz
+input logic clk_300mhz_p, clk_300mhz_n,               // 300 MHz diff clks
 input logic btnc, btnd, btnl, btnr, btnu, sw0, sw1,   // Buttons to move the Mandelbulb
 output logic o_pix_clk, o_pix_clk_5x,                 // Output clks needed for the TMDS_ODDR_converter module
 output logic TMDS_shift_red0, TMDS_shift_red1,        // Splitted colore data -> only 5x the pix_clk. This data
 output logic TMDS_shift_green0, TMDS_shift_green1,    // needs to be merged on the other device using TMDS_ODDR_converter module
 output logic TMDS_shift_blue0, TMDS_shift_blue1       // or something else that implements an ODDR.
 );
-  
+////////////////////////////////////////////////////////////////////////
+
+  logic clk;
+
+  IBUFDS IBUFDS_inst (
+    .I(clk_300mhz_p),   // Positive clock input (300 MHz)
+    .IB(clk_300mhz_n),  // Negative clock input (300 MHz)
+    .O(clk)             // Single-ended clock output (300 MHz)
+  );
+
 ////////////////////////////////////////////////////////////////////////
 
                                // 640x480 1280x720

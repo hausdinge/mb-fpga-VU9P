@@ -1,8 +1,14 @@
 # System clocks
+
+# 90 MHz
+#set_property -dict {PACKAGE_PIN AL20 IOSTANDARD LVCMOS18} [get_ports clk]
+#create_clock add -name clk -period 11.111 [get_ports clk]
+
 # 300 MHz
-set_property -dict {PACKAGE_PIN G31  IOSTANDARD DIFF_SSTL12} [get_ports clk]
-#set_property -dict {PACKAGE_PIN F31  IOSTANDARD DIFF_SSTL12} [get_ports clk_300mhz_n]
-create_clock -add -name clk -period 3.333 [get_ports clk]
+set_property -dict {PACKAGE_PIN G31  IOSTANDARD DIFF_SSTL12} [get_ports clk_300mhz_p]
+set_property -dict {PACKAGE_PIN F31  IOSTANDARD DIFF_SSTL12} [get_ports clk_300mhz_n]
+create_clock -add -name clk_300mhz_p -period 3.333 [get_ports clk_300mhz_p]
+create_clock -add -name clk_300mhz_n -period 3.333 [get_ports clk_300mhz_n]
 
 # Push buttons
 set_property -dict {PACKAGE_PIN BB24 IOSTANDARD LVCMOS18} [get_ports btnu]

@@ -1,7 +1,7 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-// Date        : Sun Sep 29 02:05:43 2024
+// Date        : Mon Sep 30 03:30:50 2024
 // Host        : nct-epic running 64-bit Debian GNU/Linux 12 (bookworm)
 // Command     : write_verilog -force -mode synth_stub
 //               /shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.gen/sources_1/ip/clk_wiz_480p/clk_wiz_480p_stub.v

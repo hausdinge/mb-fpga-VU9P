@@ -2,8 +2,8 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Sun Sep 29 04:29:19 2024
-# Process ID: 4091937
+# Start of session at: Mon Sep 30 04:16:12 2024
+# Process ID: 1135508
 # Current directory: /shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.runs/synth_1
 # Command line: vivado -log top_display.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_display.tcl
 # Log file: /shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.runs/synth_1/top_display.vds
@@ -11,30 +11,31 @@
 # Running On: nct-epic, OS: Linux, CPU Frequency: 1200.000 MHz, CPU Physical cores: 32, Host memory: 676201 MB
 #-----------------------------------------------------------
 source top_display.tcl -notrace
-create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2690.293 ; gain = 0.000 ; free physical = 609170 ; free virtual = 636898
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2690.297 ; gain = 0.000 ; free physical = 610498 ; free virtual = 638512
 Command: read_checkpoint -auto_incremental -incremental /shares/zitipoolhome/ol233/MandelbulbVU9P/MandelbulbVU9P.srcs/utils_1/imports/synth_1/top_display.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from /shares/zitipoolhome/ol233/MandelbulbVU9P/MandelbulbVU9P.srcs/utils_1/imports/synth_1/top_display.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
-read_checkpoint: Time (s): cpu = 00:00:04 ; elapsed = 00:00:32 . Memory (MB): peak = 2690.293 ; gain = 0.000 ; free physical = 608650 ; free virtual = 636889
+read_checkpoint: Time (s): cpu = 00:00:05 ; elapsed = 00:00:44 . Memory (MB): peak = 2690.297 ; gain = 0.000 ; free physical = 609638 ; free virtual = 638469
 Command: synth_design -top top_display -part xcvu9p-flga2104-2L-e
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xcvu9p'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcvu9p'
 INFO: [Device 21-403] Loading part xcvu9p-flga2104-2L-e
-WARNING: [Designutils 20-5348] Reverting to default synthesis as last run was incremental and iterative incremental synthesis is disabled in this mode
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 4093077
+INFO: [Synth 8-7075] Helper process launched with PID 1136555
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3204.898 ; gain = 299.766 ; free physical = 607214 ; free virtual = 635452
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3200.996 ; gain = 296.797 ; free physical = 608230 ; free virtual = 637061
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top_display' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/top_display.sv:20]
-INFO: [Synth 8-6157] synthesizing module 'TMDS_encoder' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/top_display.sv:278]
-INFO: [Synth 8-6155] done synthesizing module 'TMDS_encoder' (1#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/top_display.sv:278]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_720p' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.runs/synth_1/.Xil/Vivado-4091937-nct-epic/realtime/clk_wiz_720p_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_720p' (2#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.runs/synth_1/.Xil/Vivado-4091937-nct-epic/realtime/clk_wiz_720p_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS' [/shares/nct-opt/software/xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:55219]
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS' (1#1) [/shares/nct-opt/software/xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:55219]
+INFO: [Synth 8-6157] synthesizing module 'TMDS_encoder' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/top_display.sv:287]
+INFO: [Synth 8-6155] done synthesizing module 'TMDS_encoder' (2#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/top_display.sv:287]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_720p' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.runs/synth_1/.Xil/Vivado-1135508-nct-epic/realtime/clk_wiz_720p_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_720p' (3#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.runs/synth_1/.Xil/Vivado-1135508-nct-epic/realtime/clk_wiz_720p_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'OBUF' [/shares/nct-opt/software/xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:71221]
-INFO: [Synth 8-6155] done synthesizing module 'OBUF' (3#1) [/shares/nct-opt/software/xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:71221]
+INFO: [Synth 8-6155] done synthesizing module 'OBUF' (4#1) [/shares/nct-opt/software/xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:71221]
 INFO: [Synth 8-6157] synthesizing module 'ray_march' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/ray_march.sv:5]
 WARNING: [Synth 8-693] zero replication count - replication ignored [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/fixedpoint.sv:67]
 WARNING: [Synth 8-693] zero replication count - replication ignored [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/fixedpoint.sv:67]
@@ -43,7 +44,7 @@ WARNING: [Synth 8-693] zero replication count - replication ignored [/shares/zit
 WARNING: [Synth 8-693] zero replication count - replication ignored [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/fixedpoint.sv:67]
 WARNING: [Synth 8-693] zero replication count - replication ignored [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/fixedpoint.sv:67]
 INFO: [Synth 8-6157] synthesizing module 'fixedpoint_mult' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/approximate_multiplier.sv:7]
-INFO: [Synth 8-6155] done synthesizing module 'fixedpoint_mult' (4#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/approximate_multiplier.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'fixedpoint_mult' (5#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/approximate_multiplier.sv:7]
 INFO: [Synth 8-6157] synthesizing module 'mandelbulb_sdf' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/mandelbulb_sdf.sv:4]
 INFO: [Synth 8-6157] synthesizing module 'mb_sdf_iteration' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/mb_sdf_iteration.sv:5]
 INFO: [Synth 8-6157] synthesizing module 'mb_to_polar' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/mb_to_polar.sv:6]
@@ -53,8 +54,8 @@ WARNING: [Synth 8-693] zero replication count - replication ignored [/shares/zit
 WARNING: [Synth 8-693] zero replication count - replication ignored [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/fixedpoint.sv:67]
 WARNING: [Synth 8-693] zero replication count - replication ignored [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/fixedpoint.sv:67]
 WARNING: [Synth 8-6014] Unused sequential element y_reg[27] was removed.  [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/fixedpoint_arctan2.sv:80]
-INFO: [Synth 8-6155] done synthesizing module 'fixedpoint_arctan2' (5#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/fixedpoint_arctan2.sv:6]
-INFO: [Synth 8-6155] done synthesizing module 'fixedpoint_to_polar' (6#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/fixedpoint_to_polar.sv:5]
+INFO: [Synth 8-6155] done synthesizing module 'fixedpoint_arctan2' (6#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/fixedpoint_arctan2.sv:6]
+INFO: [Synth 8-6155] done synthesizing module 'fixedpoint_to_polar' (7#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/fixedpoint_to_polar.sv:5]
 WARNING: [Synth 8-5858] RAM msg_reg_reg from Abstract Data Type (record/struct) for this pattern/configuration is not supported. This will most likely be implemented in registers
 WARNING: [Synth 8-6014] Unused sequential element msg_reg_reg[0][theta] was removed.  [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/mb_to_polar.sv:27]
 WARNING: [Synth 8-6014] Unused sequential element msg_reg_reg[0][phi] was removed.  [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/mb_to_polar.sv:27]
@@ -156,70 +157,70 @@ WARNING: [Synth 8-6014] Unused sequential element msg_reg_reg[48][theta] was rem
 WARNING: [Synth 8-6014] Unused sequential element msg_reg_reg[48][phi] was removed.  [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/mb_to_polar.sv:27]
 WARNING: [Synth 8-6014] Unused sequential element msg_reg_reg[49][theta] was removed.  [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/mb_to_polar.sv:27]
 INFO: [Common 17-14] Message 'Synth 8-6014' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-6155] done synthesizing module 'mb_to_polar' (7#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/mb_to_polar.sv:6]
+INFO: [Synth 8-6155] done synthesizing module 'mb_to_polar' (8#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/mb_to_polar.sv:6]
 INFO: [Synth 8-6157] synthesizing module 'mb_dr_zr' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/mb_dr_zr.sv:4]
 INFO: [Synth 8-6157] synthesizing module 'dr_zr' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/dr_zr.sv:5]
 INFO: [Synth 8-6157] synthesizing module 'fixedpoint_pow8' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/fixedpoint_pow8.sv:5]
-INFO: [Synth 8-6157] synthesizing module 'mult_35_35_core' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.runs/synth_1/.Xil/Vivado-4091937-nct-epic/realtime/mult_35_35_core_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'mult_35_35_core' (8#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.runs/synth_1/.Xil/Vivado-4091937-nct-epic/realtime/mult_35_35_core_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'mult_35_35_core' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.runs/synth_1/.Xil/Vivado-1135508-nct-epic/realtime/mult_35_35_core_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mult_35_35_core' (9#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.runs/synth_1/.Xil/Vivado-1135508-nct-epic/realtime/mult_35_35_core_stub.v:6]
 WARNING: [Synth 8-689] width (65) of port connection 'A' does not match port width (35) of module 'mult_35_35_core' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/fixedpoint_pow8.sv:27]
 WARNING: [Synth 8-689] width (65) of port connection 'B' does not match port width (35) of module 'mult_35_35_core' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/fixedpoint_pow8.sv:27]
 WARNING: [Synth 8-689] width (70) of port connection 'A' does not match port width (35) of module 'mult_35_35_core' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/fixedpoint_pow8.sv:28]
 WARNING: [Synth 8-689] width (70) of port connection 'B' does not match port width (35) of module 'mult_35_35_core' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/fixedpoint_pow8.sv:28]
 WARNING: [Synth 8-689] width (70) of port connection 'A' does not match port width (35) of module 'mult_35_35_core' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/fixedpoint_pow8.sv:29]
 WARNING: [Synth 8-689] width (70) of port connection 'B' does not match port width (35) of module 'mult_35_35_core' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/fixedpoint_pow8.sv:29]
-INFO: [Synth 8-6155] done synthesizing module 'fixedpoint_pow8' (9#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/fixedpoint_pow8.sv:5]
+INFO: [Synth 8-6155] done synthesizing module 'fixedpoint_pow8' (10#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/fixedpoint_pow8.sv:5]
 INFO: [Synth 8-6157] synthesizing module 'approximate_multiplier' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/approximate_multiplier.sv:150]
-INFO: [Synth 8-6155] done synthesizing module 'approximate_multiplier' (10#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/approximate_multiplier.sv:150]
-INFO: [Synth 8-6155] done synthesizing module 'dr_zr' (11#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/dr_zr.sv:5]
+INFO: [Synth 8-6155] done synthesizing module 'approximate_multiplier' (11#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/approximate_multiplier.sv:150]
+INFO: [Synth 8-6155] done synthesizing module 'dr_zr' (12#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/dr_zr.sv:5]
 WARNING: [Synth 8-5858] RAM msg_reg_reg from Abstract Data Type (record/struct) for this pattern/configuration is not supported. This will most likely be implemented in registers
-INFO: [Synth 8-6155] done synthesizing module 'mb_dr_zr' (12#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/mb_dr_zr.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'mb_dr_zr' (13#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/mb_dr_zr.sv:4]
 INFO: [Synth 8-6157] synthesizing module 'mb_to_cartesian' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/mb_to_cartesian.sv:6]
 INFO: [Synth 8-6157] synthesizing module 'fixedpoint_to_cartesian' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/fixedpoint_to_cartesian.sv:5]
 INFO: [Synth 8-6157] synthesizing module 'fixedpoint_sin_cos' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/fixedpoint_sin_cos.sv:6]
-INFO: [Synth 8-6157] synthesizing module 'mult_35_24_core' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.runs/synth_1/.Xil/Vivado-4091937-nct-epic/realtime/mult_35_24_core_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'mult_35_24_core' (13#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.runs/synth_1/.Xil/Vivado-4091937-nct-epic/realtime/mult_35_24_core_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'mult_35_24_core' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.runs/synth_1/.Xil/Vivado-1135508-nct-epic/realtime/mult_35_24_core_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mult_35_24_core' (14#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.runs/synth_1/.Xil/Vivado-1135508-nct-epic/realtime/mult_35_24_core_stub.v:6]
 WARNING: [Synth 8-689] width (65) of port connection 'A' does not match port width (35) of module 'mult_35_24_core' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/fixedpoint_sin_cos.sv:73]
 WARNING: [Synth 8-689] width (65) of port connection 'A' does not match port width (35) of module 'mult_35_24_core' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/fixedpoint_sin_cos.sv:82]
 WARNING: [Synth 8-689] width (65) of port connection 'A' does not match port width (35) of module 'mult_35_24_core' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/fixedpoint_sin_cos.sv:91]
-INFO: [Synth 8-6155] done synthesizing module 'fixedpoint_sin_cos' (14#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/fixedpoint_sin_cos.sv:6]
-INFO: [Synth 8-6155] done synthesizing module 'fixedpoint_to_cartesian' (15#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/fixedpoint_to_cartesian.sv:5]
+INFO: [Synth 8-6155] done synthesizing module 'fixedpoint_sin_cos' (15#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/fixedpoint_sin_cos.sv:6]
+INFO: [Synth 8-6155] done synthesizing module 'fixedpoint_to_cartesian' (16#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/fixedpoint_to_cartesian.sv:5]
 WARNING: [Synth 8-5858] RAM msg_reg_reg from Abstract Data Type (record/struct) for this pattern/configuration is not supported. This will most likely be implemented in registers
-INFO: [Synth 8-6155] done synthesizing module 'mb_to_cartesian' (16#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/mb_to_cartesian.sv:6]
-INFO: [Synth 8-6155] done synthesizing module 'mb_sdf_iteration' (17#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/mb_sdf_iteration.sv:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_to_cartesian' (17#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/mb_to_cartesian.sv:6]
+INFO: [Synth 8-6155] done synthesizing module 'mb_sdf_iteration' (18#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/mb_sdf_iteration.sv:5]
 INFO: [Synth 8-6157] synthesizing module 'mb_log_dist' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/mb_log_dist.sv:5]
 WARNING: [Synth 8-693] zero replication count - replication ignored [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/fixedpoint.sv:67]
 INFO: [Synth 8-6157] synthesizing module 'cordic_inverse_number' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/cordic_inverse_number.sv:4]
 INFO: [Synth 8-6157] synthesizing module 'fixedpoint_MSB_index2' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/fixedpoint_MSB_index2.sv:5]
-INFO: [Synth 8-6155] done synthesizing module 'fixedpoint_MSB_index2' (18#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/fixedpoint_MSB_index2.sv:5]
-INFO: [Synth 8-6155] done synthesizing module 'cordic_inverse_number' (19#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/cordic_inverse_number.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'fixedpoint_MSB_index2' (19#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/fixedpoint_MSB_index2.sv:5]
+INFO: [Synth 8-6155] done synthesizing module 'cordic_inverse_number' (20#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/cordic_inverse_number.sv:4]
 INFO: [Synth 8-6157] synthesizing module 'bkm_log2' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/bkm_log2.sv:4]
-INFO: [Synth 8-6155] done synthesizing module 'bkm_log2' (20#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/bkm_log2.sv:4]
-INFO: [Synth 8-6155] done synthesizing module 'mb_log_dist' (21#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/mb_log_dist.sv:5]
+INFO: [Synth 8-6155] done synthesizing module 'bkm_log2' (21#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/bkm_log2.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'mb_log_dist' (22#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/mb_log_dist.sv:5]
 WARNING: [Synth 8-5858] RAM res_reg from Abstract Data Type (record/struct) for this pattern/configuration is not supported. This will most likely be implemented in registers
-INFO: [Synth 8-6155] done synthesizing module 'mandelbulb_sdf' (22#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/mandelbulb_sdf.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'mandelbulb_sdf' (23#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/mandelbulb_sdf.sv:4]
 INFO: [Synth 8-6157] synthesizing module 'PushButton_Debouncer' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/PushButton_Debouncer.sv:3]
-INFO: [Synth 8-6155] done synthesizing module 'PushButton_Debouncer' (23#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/PushButton_Debouncer.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'PushButton_Debouncer' (24#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/PushButton_Debouncer.sv:3]
 WARNING: [Synth 8-693] zero replication count - replication ignored [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/fixedpoint.sv:67]
 WARNING: [Synth 8-693] zero replication count - replication ignored [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/fixedpoint.sv:67]
 WARNING: [Synth 8-693] zero replication count - replication ignored [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/fixedpoint.sv:67]
 WARNING: [Synth 8-693] zero replication count - replication ignored [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/fixedpoint.sv:67]
 WARNING: [Synth 8-693] zero replication count - replication ignored [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/fixedpoint.sv:67]
 WARNING: [Synth 8-5858] RAM msg_out_reg from Abstract Data Type (record/struct) for this pattern/configuration is not supported. This will most likely be implemented in registers
-INFO: [Synth 8-6155] done synthesizing module 'ray_march' (24#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/ray_march.sv:5]
+INFO: [Synth 8-6155] done synthesizing module 'ray_march' (25#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/ray_march.sv:5]
 INFO: [Synth 8-6157] synthesizing module 'BRAM_to_HDMI' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/BRAM_to_HDMI.sv:5]
 	Parameter H_RES bound to: 1280 - type: integer 
 	Parameter V_RES bound to: 720 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.runs/synth_1/.Xil/Vivado-4091937-nct-epic/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (25#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.runs/synth_1/.Xil/Vivado-4091937-nct-epic/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BRAM_to_HDMI' (26#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/BRAM_to_HDMI.sv:5]
-WARNING: [Synth 8-3936] Found unconnected internal register 'TMDS_shift_red_reg[1]' and it is trimmed from '10' to '1' bits. [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/top_display.sv:142]
-WARNING: [Synth 8-3936] Found unconnected internal register 'TMDS_red_next_reg' and it is trimmed from '10' to '1' bits. [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/top_display.sv:134]
-WARNING: [Synth 8-3936] Found unconnected internal register 'TMDS_shift_green_reg[1]' and it is trimmed from '10' to '1' bits. [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/top_display.sv:143]
-WARNING: [Synth 8-3936] Found unconnected internal register 'TMDS_green_next_reg' and it is trimmed from '10' to '1' bits. [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/top_display.sv:135]
-WARNING: [Synth 8-3936] Found unconnected internal register 'TMDS_shift_blue_reg[1]' and it is trimmed from '10' to '1' bits. [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/top_display.sv:144]
-WARNING: [Synth 8-3936] Found unconnected internal register 'TMDS_blue_next_reg' and it is trimmed from '10' to '1' bits. [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/top_display.sv:136]
-INFO: [Synth 8-6155] done synthesizing module 'top_display' (27#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/top_display.sv:20]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.runs/synth_1/.Xil/Vivado-1135508-nct-epic/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (26#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.runs/synth_1/.Xil/Vivado-1135508-nct-epic/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BRAM_to_HDMI' (27#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/BRAM_to_HDMI.sv:5]
+WARNING: [Synth 8-3936] Found unconnected internal register 'TMDS_shift_red_reg[1]' and it is trimmed from '10' to '1' bits. [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/top_display.sv:151]
+WARNING: [Synth 8-3936] Found unconnected internal register 'TMDS_red_next_reg' and it is trimmed from '10' to '1' bits. [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/top_display.sv:143]
+WARNING: [Synth 8-3936] Found unconnected internal register 'TMDS_shift_green_reg[1]' and it is trimmed from '10' to '1' bits. [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/top_display.sv:152]
+WARNING: [Synth 8-3936] Found unconnected internal register 'TMDS_green_next_reg' and it is trimmed from '10' to '1' bits. [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/top_display.sv:144]
+WARNING: [Synth 8-3936] Found unconnected internal register 'TMDS_shift_blue_reg[1]' and it is trimmed from '10' to '1' bits. [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/top_display.sv:153]
+WARNING: [Synth 8-3936] Found unconnected internal register 'TMDS_blue_next_reg' and it is trimmed from '10' to '1' bits. [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/top_display.sv:145]
+INFO: [Synth 8-6155] done synthesizing module 'top_display' (28#1) [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/new/top_display.sv:20]
 WARNING: [Synth 8-7129] Port lock in module BRAM_to_HDMI is either unconnected or has no load
 WARNING: [Synth 8-7129] Port data_in[x_iter][64] in module mb_to_cartesian is either unconnected or has no load
 WARNING: [Synth 8-7129] Port data_in[x_iter][63] in module mb_to_cartesian is either unconnected or has no load
@@ -322,18 +323,20 @@ WARNING: [Synth 8-7129] Port data_in[y_iter][32] in module mb_to_cartesian is ei
 WARNING: [Synth 8-7129] Port data_in[y_iter][31] in module mb_to_cartesian is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 3473.867 ; gain = 568.734 ; free physical = 606983 ; free virtual = 635228
+Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 3472.934 ; gain = 568.734 ; free physical = 607997 ; free virtual = 636833
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 3488.711 ; gain = 583.578 ; free physical = 607020 ; free virtual = 635264
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 3487.777 ; gain = 583.578 ; free physical = 608016 ; free virtual = 636852
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 3488.711 ; gain = 583.578 ; free physical = 607020 ; free virtual = 635264
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 3487.777 ; gain = 583.578 ; free physical = 608016 ; free virtual = 636852
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 4327.898 ; gain = 0.000 ; free physical = 606101 ; free virtual = 634345
+Netlist sorting complete. Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 4324.965 ; gain = 0.000 ; free physical = 607056 ; free virtual = 635892
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -413,22 +416,23 @@ Finished Parsing XDC File [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9
 Parsing XDC File [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.gen/sources_1/ip/mult_35_35_core/mult_35_35_core/mult_35_35_core_in_context.xdc] for cell 'raymarcher/ss/msdi_4/dr_zr/drzr/p8/pw2_3'
 Finished Parsing XDC File [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.gen/sources_1/ip/mult_35_35_core/mult_35_35_core/mult_35_35_core_in_context.xdc] for cell 'raymarcher/ss/msdi_4/dr_zr/drzr/p8/pw2_3'
 Parsing XDC File [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.gen/sources_1/ip/clk_wiz_720p/clk_wiz_720p/clk_wiz_720p_in_context.xdc] for cell 'serial_and_pix_clks'
-create_clock: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 5334.594 ; gain = 33.688 ; free physical = 604962 ; free virtual = 633207
+create_clock: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 5328.660 ; gain = 25.750 ; free physical = 605943 ; free virtual = 634779
 Finished Parsing XDC File [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.gen/sources_1/ip/clk_wiz_720p/clk_wiz_720p/clk_wiz_720p_in_context.xdc] for cell 'serial_and_pix_clks'
 Parsing XDC File [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/constrs_1/new/board_constr.xdc]
-INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/constrs_1/new/board_constr.xdc:15]
-INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/constrs_1/new/board_constr.xdc:22]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/constrs_1/new/board_constr.xdc:21]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/constrs_1/new/board_constr.xdc:28]
 Finished Parsing XDC File [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/constrs_1/new/board_constr.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/constrs_1/new/board_constr.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_display_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_display_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-write_xdc: Time (s): cpu = 00:00:31 ; elapsed = 00:00:10 . Memory (MB): peak = 5753.594 ; gain = 419.000 ; free physical = 604893 ; free virtual = 633137
+write_xdc: Time (s): cpu = 00:00:34 ; elapsed = 00:00:10 . Memory (MB): peak = 5747.660 ; gain = 419.000 ; free physical = 605874 ; free virtual = 634711
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00.75 ; elapsed = 00:00:00.79 . Memory (MB): peak = 5753.594 ; gain = 0.000 ; free physical = 604872 ; free virtual = 633116
+Netlist sorting complete. Time (s): cpu = 00:00:00.80 ; elapsed = 00:00:00.82 . Memory (MB): peak = 5747.660 ; gain = 0.000 ; free physical = 605862 ; free virtual = 634698
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 1 instances were transformed.
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 5753.594 ; gain = 0.000 ; free physical = 604888 ; free virtual = 633132
+Constraint Validation Runtime : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 5747.660 ; gain = 0.000 ; free physical = 605868 ; free virtual = 634704
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'bth/framebuffer' at clock pin 'clka' is different from the actual clock period '10.100', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'raymarcher/ss/msdi_1/dr_zr/drzr/p8/pw2_1' at clock pin 'CLK' is different from the actual clock period '10.100', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'raymarcher/ss/msdi_1/dr_zr/drzr/p8/pw2_2' at clock pin 'CLK' is different from the actual clock period '10.100', this can lead to different synthesis results.
@@ -466,9 +470,8 @@ WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context 
 WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'raymarcher/ss/msdi_4/tc/tc/sc2/times_inv_two_pi' at clock pin 'CLK' is different from the actual clock period '10.100', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'raymarcher/ss/msdi_4/tc/tc/sc2/times_scale_factor' at clock pin 'CLK' is different from the actual clock period '10.100', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'raymarcher/ss/msdi_4/tc/tc/sc2/times_two_pi' at clock pin 'CLK' is different from the actual clock period '10.100', this can lead to different synthesis results.
-WARNING: [Designutils 20-5348] Reverting to default synthesis as last run was incremental and iterative incremental synthesis is disabled in this mode
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:03:42 ; elapsed = 00:02:18 . Memory (MB): peak = 5753.594 ; gain = 2848.461 ; free physical = 606773 ; free virtual = 635018
+Finished Constraint Validation : Time (s): cpu = 00:03:48 ; elapsed = 00:02:19 . Memory (MB): peak = 5747.660 ; gain = 2843.461 ; free physical = 607746 ; free virtual = 636583
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -476,13 +479,11 @@ Start Loading Part and Timing Information
 Loading part: xcvu9p-flga2104-2L-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:03:43 ; elapsed = 00:02:18 . Memory (MB): peak = 5753.594 ; gain = 2848.461 ; free physical = 606774 ; free virtual = 635018
+Finished Loading Part and Timing Information : Time (s): cpu = 00:03:48 ; elapsed = 00:02:19 . Memory (MB): peak = 5747.660 ; gain = 2843.461 ; free physical = 607752 ; free virtual = 636588
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  /shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.gen/sources_1/ip/clk_wiz_720p/clk_wiz_720p/clk_wiz_720p_in_context.xdc, line 5).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  /shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.gen/sources_1/ip/clk_wiz_720p/clk_wiz_720p/clk_wiz_720p_in_context.xdc, line 6).
 Applied set_property KEEP_HIERARCHY = SOFT for bth/framebuffer. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for raymarcher/ss/msdi_1/tc/tc/sc1/times_inv_two_pi. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for raymarcher/ss/msdi_1/tc/tc/sc2/times_inv_two_pi. (constraint file  auto generated constraint).
@@ -522,11 +523,31 @@ Applied set_property KEEP_HIERARCHY = SOFT for raymarcher/ss/msdi_3/dr_zr/drzr/p
 Applied set_property KEEP_HIERARCHY = SOFT for raymarcher/ss/msdi_4/dr_zr/drzr/p8/pw2_3. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for serial_and_pix_clks. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:03:45 ; elapsed = 00:02:21 . Memory (MB): peak = 5753.594 ; gain = 2848.461 ; free physical = 606381 ; free virtual = 634626
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:03:51 ; elapsed = 00:02:22 . Memory (MB): peak = 5747.660 ; gain = 2843.461 ; free physical = 607359 ; free virtual = 636195
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:04:19 ; elapsed = 00:03:02 . Memory (MB): peak = 5753.594 ; gain = 2848.461 ; free physical = 599754 ; free virtual = 628014
+Start Preparing Guide Design
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-6702] IncrSynth : No reusable genomes found, Reverting to default synthesis
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:04:00 ; elapsed = 00:02:37 . Memory (MB): peak = 5747.660 ; gain = 2843.461 ; free physical = 606442 ; free virtual = 635294
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:04:00 ; elapsed = 00:02:37 . Memory (MB): peak = 5747.660 ; gain = 2843.461 ; free physical = 606442 ; free virtual = 635294
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:04:30 ; elapsed = 00:03:11 . Memory (MB): peak = 5747.660 ; gain = 2843.461 ; free physical = 599234 ; free virtual = 628086
+---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: no
+
+   Reason for not running incremental synthesis : No reusable genomes found
+
+
+INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -2500,7 +2521,7 @@ DSP Report: operator fm3/ is absorbed into DSP fm3/M_reg[6].
 DSP Report: operator fm3/ is absorbed into DSP fm3/M_reg[6].
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:05:29 ; elapsed = 00:04:31 . Memory (MB): peak = 5753.594 ; gain = 2848.461 ; free physical = 598040 ; free virtual = 626574
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:05:39 ; elapsed = 00:04:37 . Memory (MB): peak = 5747.660 ; gain = 2843.461 ; free physical = 598708 ; free virtual = 627838
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -2705,9 +2726,8 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-565] redefining clock 'clk'
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:06:04 ; elapsed = 00:05:16 . Memory (MB): peak = 5753.594 ; gain = 2848.461 ; free physical = 597138 ; free virtual = 625866
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:06:14 ; elapsed = 00:05:24 . Memory (MB): peak = 5747.660 ; gain = 2843.461 ; free physical = 597797 ; free virtual = 627123
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
@@ -2814,20 +2834,16 @@ WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default 
 WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
 INFO: [Common 17-14] Message 'Synth 8-6779' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:08:49 ; elapsed = 00:08:21 . Memory (MB): peak = 5753.594 ; gain = 2848.461 ; free physical = 597196 ; free virtual = 625927
+Finished Timing Optimization : Time (s): cpu = 00:09:00 ; elapsed = 00:08:30 . Memory (MB): peak = 5747.660 ; gain = 2843.461 ; free physical = 597942 ; free virtual = 627270
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-565] redefining clock 'clk'
 INFO: [Common 17-14] Message 'Synth 8-6779' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-WARNING: [Synth 8-565] redefining clock 'clk'
 INFO: [Common 17-14] Message 'Synth 8-6779' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-WARNING: [Synth 8-565] redefining clock 'clk'
-WARNING: [Synth 8-565] redefining clock 'clk'
 INFO: [Common 17-14] Message 'Synth 8-6779' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:10:08 ; elapsed = 00:09:50 . Memory (MB): peak = 5753.594 ; gain = 2848.461 ; free physical = 594536 ; free virtual = 623276
+Finished Technology Mapping : Time (s): cpu = 00:10:22 ; elapsed = 00:10:03 . Memory (MB): peak = 5747.660 ; gain = 2843.461 ; free physical = 595187 ; free virtual = 624526
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -2845,37 +2861,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:11:18 ; elapsed = 00:11:17 . Memory (MB): peak = 5753.594 ; gain = 2848.461 ; free physical = 594705 ; free virtual = 623791
+Finished IO Insertion : Time (s): cpu = 00:11:31 ; elapsed = 00:11:29 . Memory (MB): peak = 5747.660 ; gain = 2843.461 ; free physical = 595415 ; free virtual = 625113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:11:18 ; elapsed = 00:11:17 . Memory (MB): peak = 5753.594 ; gain = 2848.461 ; free physical = 594686 ; free virtual = 623772
+Finished Renaming Generated Instances : Time (s): cpu = 00:11:32 ; elapsed = 00:11:30 . Memory (MB): peak = 5747.660 ; gain = 2843.461 ; free physical = 595434 ; free virtual = 625132
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:12:25 ; elapsed = 00:12:25 . Memory (MB): peak = 5753.594 ; gain = 2848.461 ; free physical = 594548 ; free virtual = 623634
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:12:39 ; elapsed = 00:12:38 . Memory (MB): peak = 5747.660 ; gain = 2843.461 ; free physical = 595291 ; free virtual = 624990
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:12:26 ; elapsed = 00:12:26 . Memory (MB): peak = 5753.594 ; gain = 2848.461 ; free physical = 594545 ; free virtual = 623631
+Finished Renaming Generated Ports : Time (s): cpu = 00:12:40 ; elapsed = 00:12:39 . Memory (MB): peak = 5747.660 ; gain = 2843.461 ; free physical = 595306 ; free virtual = 625005
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:12:29 ; elapsed = 00:12:30 . Memory (MB): peak = 5753.594 ; gain = 2848.461 ; free physical = 594570 ; free virtual = 623656
+Finished Handling Custom Attributes : Time (s): cpu = 00:12:44 ; elapsed = 00:12:43 . Memory (MB): peak = 5747.660 ; gain = 2843.461 ; free physical = 595330 ; free virtual = 625029
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:12:30 ; elapsed = 00:12:31 . Memory (MB): peak = 5753.594 ; gain = 2848.461 ; free physical = 594562 ; free virtual = 623648
+Finished Renaming Generated Nets : Time (s): cpu = 00:12:45 ; elapsed = 00:12:44 . Memory (MB): peak = 5747.660 ; gain = 2843.461 ; free physical = 595328 ; free virtual = 625027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -3120,50 +3136,52 @@ Report Cell Usage:
 |39    |CARRY8          |  12004|
 |40    |DSP_ALU         |    271|
 |42    |DSP_A_B_DATA    |    271|
-|49    |DSP_C_DATA      |    271|
-|50    |DSP_MULTIPLIER  |    271|
-|51    |DSP_M_DATA      |    271|
-|53    |DSP_OUTPUT      |    271|
-|55    |DSP_PREADD      |    271|
-|56    |DSP_PREADD_DATA |    271|
-|57    |LUT1            |   4608|
-|58    |LUT2            |  29685|
-|59    |LUT3            |  56025|
-|60    |LUT4            |   2716|
-|61    |LUT5            |   1156|
-|62    |LUT6            |   1591|
-|63    |MUXF7           |     67|
-|64    |SRL16E          |   3032|
-|65    |SRLC32E         |  23322|
-|66    |FDRE            | 110643|
-|67    |FDSE            |    122|
-|68    |IBUF            |      7|
-|69    |OBUF            |      8|
+|50    |DSP_C_DATA      |    271|
+|52    |DSP_MULTIPLIER  |    271|
+|53    |DSP_M_DATA      |    271|
+|55    |DSP_OUTPUT      |    271|
+|57    |DSP_PREADD      |    271|
+|58    |DSP_PREADD_DATA |    271|
+|59    |LUT1            |   4608|
+|60    |LUT2            |  29684|
+|61    |LUT3            |  56026|
+|62    |LUT4            |   2716|
+|63    |LUT5            |   1158|
+|64    |LUT6            |   1591|
+|65    |MUXF7           |     67|
+|66    |SRL16E          |   3032|
+|67    |SRLC32E         |  23322|
+|68    |FDRE            | 110643|
+|69    |FDSE            |    122|
+|70    |IBUF            |      7|
+|71    |IBUFDS          |      1|
+|72    |OBUF            |      8|
 +------+----------------+-------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:12:31 ; elapsed = 00:12:31 . Memory (MB): peak = 5753.594 ; gain = 2848.461 ; free physical = 594572 ; free virtual = 623659
+Finished Writing Synthesis Report : Time (s): cpu = 00:12:45 ; elapsed = 00:12:44 . Memory (MB): peak = 5747.660 ; gain = 2843.461 ; free physical = 595328 ; free virtual = 625026
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 24742 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:09:21 ; elapsed = 00:10:49 . Memory (MB): peak = 5753.594 ; gain = 583.578 ; free physical = 604789 ; free virtual = 633875
-Synthesis Optimization Complete : Time (s): cpu = 00:12:38 ; elapsed = 00:12:37 . Memory (MB): peak = 5753.594 ; gain = 2848.461 ; free physical = 604827 ; free virtual = 633890
+Synthesis finished with 0 errors, 0 critical warnings and 24718 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:09:30 ; elapsed = 00:10:58 . Memory (MB): peak = 5747.660 ; gain = 583.578 ; free physical = 605582 ; free virtual = 635281
+Synthesis Optimization Complete : Time (s): cpu = 00:12:53 ; elapsed = 00:12:47 . Memory (MB): peak = 5747.660 ; gain = 2843.461 ; free physical = 605615 ; free virtual = 635289
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 5753.594 ; gain = 0.000 ; free physical = 604716 ; free virtual = 633778
-INFO: [Netlist 29-17] Analyzing 12349 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 5747.660 ; gain = 0.000 ; free physical = 605501 ; free virtual = 635174
+INFO: [Netlist 29-17] Analyzing 12350 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 3 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 5777.605 ; gain = 0.000 ; free physical = 604580 ; free virtual = 633642
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.04 . Memory (MB): peak = 5771.672 ; gain = 0.000 ; free physical = 605379 ; free virtual = 635051
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 278 instances were transformed.
+  A total of 279 instances were transformed.
   DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 271 instances
   IBUF => IBUF (IBUFCTRL, INBUF): 7 instances
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
 
-Synth Design complete, checksum: a169e072
+Synth Design complete, checksum: 70d860dc
 INFO: [Common 17-83] Releasing license: Synthesis
-368 Infos, 473 Warnings, 0 Critical Warnings and 0 Errors encountered.
+373 Infos, 467 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:13:48 ; elapsed = 00:13:53 . Memory (MB): peak = 5785.609 ; gain = 3095.316 ; free physical = 605178 ; free virtual = 634241
+synth_design: Time (s): cpu = 00:14:03 ; elapsed = 00:14:04 . Memory (MB): peak = 5771.672 ; gain = 3081.375 ; free physical = 606001 ; free virtual = 635674
 INFO: [Common 17-1381] The checkpoint '/shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.runs/synth_1/top_display.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 5817.625 ; gain = 32.016 ; free physical = 605111 ; free virtual = 634267
+write_checkpoint: Time (s): cpu = 00:00:52 ; elapsed = 00:00:53 . Memory (MB): peak = 5803.688 ; gain = 32.016 ; free physical = 605922 ; free virtual = 635692
 INFO: [runtcl-4] Executing : report_utilization -file top_display_utilization_synth.rpt -pb top_display_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Sep 29 04:45:20 2024...
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 30 04:32:38 2024...

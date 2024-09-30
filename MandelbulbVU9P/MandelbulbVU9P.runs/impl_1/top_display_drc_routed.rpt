@@ -1,0 +1,137 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Mon Sep 30 05:03:41 2024
+| Host         : nct-epic running 64-bit Debian GNU/Linux 12 (bookworm)
+| Command      : report_drc -file top_display_drc_routed.rpt -pb top_display_drc_routed.pb -rpx top_display_drc_routed.rpx
+| Design       : top_display
+| Device       : xcvu9p-flga2104-2L-e
+| Speed File   : -2L
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 20
++--------+----------+------------------------+------------+
+| Rule   | Severity | Description            | Violations |
++--------+----------+------------------------+------------+
+| DPOP-3 | Warning  | PREG Output pipelining | 19         |
+| DPOP-4 | Warning  | MREG Output pipelining | 1          |
++--------+----------+------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+DPOP-3#1 Warning
+PREG Output pipelining  
+DSP bth/addrb0 output bth/addrb0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#2 Warning
+PREG Output pipelining  
+DSP raymarcher/fm1/ output raymarcher/fm1//P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#3 Warning
+PREG Output pipelining  
+DSP raymarcher/fm2/ output raymarcher/fm2//P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#4 Warning
+PREG Output pipelining  
+DSP raymarcher/fm3/ output raymarcher/fm3//P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#5 Warning
+PREG Output pipelining  
+DSP raymarcher/ss/ld/approxmult_dst1/fm/ output raymarcher/ss/ld/approxmult_dst1/fm//P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#6 Warning
+PREG Output pipelining  
+DSP raymarcher/ss/ld/approxmult_dst2/fm/ output raymarcher/ss/ld/approxmult_dst2/fm//P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#7 Warning
+PREG Output pipelining  
+DSP raymarcher/ss/ld/approxmult_dst3/fm/ output raymarcher/ss/ld/approxmult_dst3/fm//P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#8 Warning
+PREG Output pipelining  
+DSP raymarcher/ss/msdi_1/dr_zr/drzr/approxmult_drzr/fm/ output raymarcher/ss/msdi_1/dr_zr/drzr/approxmult_drzr/fm//P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#9 Warning
+PREG Output pipelining  
+DSP raymarcher/ss/msdi_1/tp/tp/act1/fmatan2scale/ output raymarcher/ss/msdi_1/tp/tp/act1/fmatan2scale//P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#10 Warning
+PREG Output pipelining  
+DSP raymarcher/ss/msdi_1/tp/tp/act2/fmatan2scale/ output raymarcher/ss/msdi_1/tp/tp/act2/fmatan2scale//P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#11 Warning
+PREG Output pipelining  
+DSP raymarcher/ss/msdi_2/dr_zr/drzr/approxmult_drzr/fm/ output raymarcher/ss/msdi_2/dr_zr/drzr/approxmult_drzr/fm//P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#12 Warning
+PREG Output pipelining  
+DSP raymarcher/ss/msdi_2/tp/tp/act1/fmatan2scale/ output raymarcher/ss/msdi_2/tp/tp/act1/fmatan2scale//P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#13 Warning
+PREG Output pipelining  
+DSP raymarcher/ss/msdi_2/tp/tp/act2/fmatan2scale/ output raymarcher/ss/msdi_2/tp/tp/act2/fmatan2scale//P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#14 Warning
+PREG Output pipelining  
+DSP raymarcher/ss/msdi_3/dr_zr/drzr/approxmult_drzr/fm/ output raymarcher/ss/msdi_3/dr_zr/drzr/approxmult_drzr/fm//P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#15 Warning
+PREG Output pipelining  
+DSP raymarcher/ss/msdi_3/tp/tp/act1/fmatan2scale/ output raymarcher/ss/msdi_3/tp/tp/act1/fmatan2scale//P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#16 Warning
+PREG Output pipelining  
+DSP raymarcher/ss/msdi_3/tp/tp/act2/fmatan2scale/ output raymarcher/ss/msdi_3/tp/tp/act2/fmatan2scale//P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#17 Warning
+PREG Output pipelining  
+DSP raymarcher/ss/msdi_4/dr_zr/drzr/approxmult_drzr/fm/ output raymarcher/ss/msdi_4/dr_zr/drzr/approxmult_drzr/fm//P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#18 Warning
+PREG Output pipelining  
+DSP raymarcher/ss/msdi_4/tp/tp/act1/fmatan2scale/ output raymarcher/ss/msdi_4/tp/tp/act1/fmatan2scale//P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#19 Warning
+PREG Output pipelining  
+DSP raymarcher/ss/msdi_4/tp/tp/act2/fmatan2scale/ output raymarcher/ss/msdi_4/tp/tp/act2/fmatan2scale//P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-4#1 Warning
+MREG Output pipelining  
+DSP bth/addrb0 multiplier stage bth/addrb0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+
