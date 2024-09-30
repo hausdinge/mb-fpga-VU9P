@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date             : Mon Sep 30 05:05:20 2024
+| Date             : Mon Sep 30 06:25:52 2024
 | Host             : nct-epic running 64-bit Debian GNU/Linux 12 (bookworm)
 | Command          : report_power -file top_display_power_routed.rpt -pb top_display_power_summary_routed.pb -rpx top_display_power_routed.rpx
 | Design           : top_display
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 5.290        |
+| Total On-Chip Power (W)  | 5.315        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 2.779        |
+| Dynamic (W)              | 2.803        |
 | Device Static (W)        | 2.511        |
 | Effective TJA (C/W)      | 0.5          |
 | Max Ambient (C)          | 97.1         |
@@ -52,22 +52,22 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.343 |        9 |       --- |             --- |
-| CLB Logic               |     1.169 |   246777 |       --- |             --- |
-|   LUT as Logic          |     0.665 |    89566 |   1182240 |            7.58 |
-|   LUT as Shift Register |     0.306 |    25365 |    591840 |            4.29 |
-|   Register              |     0.119 |   111354 |   2364480 |            4.71 |
-|   CARRY8                |     0.077 |    12003 |    147780 |            8.12 |
+| Clocks                  |     0.345 |        9 |       --- |             --- |
+| CLB Logic               |     1.192 |   246777 |       --- |             --- |
+|   LUT as Logic          |     0.670 |    89567 |   1182240 |            7.58 |
+|   LUT as Shift Register |     0.325 |    25365 |    591840 |            4.29 |
+|   Register              |     0.120 |   111354 |   2364480 |            4.71 |
+|   CARRY8                |     0.078 |    12003 |    147780 |            8.12 |
 |   Others                |     0.000 |      657 |       --- |             --- |
 |   F7/F8 Muxes           |     0.000 |       72 |   1182240 |           <0.01 |
 |   BUFG                  |     0.000 |        8 |       240 |            3.33 |
-| Signals                 |     0.892 |   155824 |       --- |             --- |
+| Signals                 |     0.888 |   155824 |       --- |             --- |
 | Block RAM               |     0.049 |      155 |      2160 |            7.18 |
 | MMCM                    |     0.113 |        0 |       --- |             --- |
-| DSPs                    |     0.173 |      367 |      6840 |            5.37 |
+| DSPs                    |     0.175 |      367 |      6840 |            5.37 |
 | I/O                     |     0.041 |       17 |       832 |            2.04 |
 | Static Power            |     2.511 |          |           |                 |
-| Total                   |     5.290 |          |           |                 |
+| Total                   |     5.315 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,8 +77,8 @@ Table of Contents
 +------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source     | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint     |       0.850 |     3.948 |       3.086 |      0.861 |       NA    | Unspecified | NA         |
-| Vccint_io  |       0.850 |     0.266 |       0.002 |      0.264 |       NA    | Unspecified | NA         |
+| Vccint     |       0.850 |     3.978 |       3.116 |      0.862 |       NA    | Unspecified | NA         |
+| Vccint_io  |       0.850 |     0.267 |       0.002 |      0.264 |       NA    | Unspecified | NA         |
 | Vccbram    |       0.850 |     0.018 |       0.002 |      0.016 |       NA    | Unspecified | NA         |
 | Vccaux     |       1.800 |     0.709 |       0.062 |      0.647 |       NA    | Unspecified | NA         |
 | Vccaux_io  |       1.800 |     0.192 |       0.007 |      0.185 |       NA    | Unspecified | NA         |
@@ -136,10 +136,10 @@ Table of Contents
 +--------------------------------+---------------------------------------------------------+-----------------+
 | Clock                          | Domain                                                  | Constraint (ns) |
 +--------------------------------+---------------------------------------------------------+-----------------+
-| clk_300mhz_n                   | IBUFDS_inst/O                                           |             3.3 |
 | clk_300mhz_n                   | clk_300mhz_n                                            |             3.3 |
-| clk_300mhz_p                   | IBUFDS_inst/O                                           |             3.3 |
+| clk_300mhz_n                   | diff_to_singleEnded_clk_0/O                             |             3.3 |
 | clk_300mhz_p                   | clk_300mhz_p                                            |             3.3 |
+| clk_300mhz_p                   | diff_to_singleEnded_clk_0/O                             |             3.3 |
 | clk_out_100MHz_clk_wiz_720p    | serial_and_pix_clks/inst/clk_out_100MHz_clk_wiz_720p    |            10.1 |
 | clk_out_371_25MHz_clk_wiz_720p | serial_and_pix_clks/inst/clk_out_371_25MHz_clk_wiz_720p |             2.7 |
 | clk_out_74_25MHz_clk_wiz_720p  | serial_and_pix_clks/inst/clk_out_74_25MHz_clk_wiz_720p  |            13.5 |
@@ -153,26 +153,26 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+-----------------------+-----------+
-| Name                  | Power (W) |
-+-----------------------+-----------+
-| top_display           |     2.779 |
-|   IBUFDS_inst         |     0.003 |
-|   bth                 |     0.055 |
-|     framebuffer       |     0.054 |
-|       U0              |     0.054 |
-|   raymarcher          |     2.555 |
-|     fm1               |     0.022 |
-|     fm2               |     0.016 |
-|     fm3               |     0.014 |
-|     ss                |     2.456 |
-|       ld              |     0.138 |
-|       msdi_1          |     0.570 |
-|       msdi_2          |     0.564 |
-|       msdi_3          |     0.568 |
-|       msdi_4          |     0.577 |
-|   serial_and_pix_clks |     0.115 |
-|     inst              |     0.115 |
-+-----------------------+-----------+
++-----------------------------+-----------+
+| Name                        | Power (W) |
++-----------------------------+-----------+
+| top_display                 |     2.803 |
+|   bth                       |     0.055 |
+|     framebuffer             |     0.054 |
+|       U0                    |     0.054 |
+|   diff_to_singleEnded_clk_0 |     0.003 |
+|   raymarcher                |     2.578 |
+|     fm1                     |     0.021 |
+|     fm2                     |     0.016 |
+|     fm3                     |     0.015 |
+|     ss                      |     2.479 |
+|       ld                    |     0.138 |
+|       msdi_1                |     0.578 |
+|       msdi_2                |     0.570 |
+|       msdi_3                |     0.576 |
+|       msdi_4                |     0.578 |
+|   serial_and_pix_clks       |     0.115 |
+|     inst                    |     0.115 |
++-----------------------------+-----------+
 
 

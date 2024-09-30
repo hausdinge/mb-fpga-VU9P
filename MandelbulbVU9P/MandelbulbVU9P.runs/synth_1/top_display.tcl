@@ -70,11 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param power.enableUnconnectedCarry8PinPower 1
-set_param chipscope.maxJobs 32
-set_param power.enableCarry8RouteBelPower 1
-set_param power.BramSDPPropagationFix 1
-set_param power.enableLutRouteBelPower 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xcvu9p-flga2104-2L-e
 
@@ -128,12 +123,6 @@ set_property used_in_implementation false [get_files -all /shares/zitipoolhome/o
 
 read_ip -quiet /shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/ip/mult_gen_0/mult_gen_0.xci
 set_property used_in_implementation false [get_files -all /shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.gen/sources_1/ip/mult_gen_0/mult_gen_0_ooc.xdc]
-
-read_ip -quiet /shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/ip/clk_wiz_480p/clk_wiz_480p.xci
-set_property used_in_implementation false [get_files -all /shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.gen/sources_1/ip/clk_wiz_480p/clk_wiz_480p_board.xdc]
-set_property used_in_implementation false [get_files -all /shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.gen/sources_1/ip/clk_wiz_480p/clk_wiz_480p.xdc]
-set_property used_in_implementation false [get_files -all /shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.gen/sources_1/ip/clk_wiz_480p/clk_wiz_480p_late.xdc]
-set_property used_in_implementation false [get_files -all /shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.gen/sources_1/ip/clk_wiz_480p/clk_wiz_480p_ooc.xdc]
 
 read_ip -quiet /shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/ip/clk_wiz_720p/clk_wiz_720p.xci
 set_property used_in_implementation false [get_files -all /shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.gen/sources_1/ip/clk_wiz_720p/clk_wiz_720p_board.xdc]

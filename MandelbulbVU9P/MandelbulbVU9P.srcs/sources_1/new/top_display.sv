@@ -29,7 +29,7 @@ output logic TMDS_shift_blue0, TMDS_shift_blue1       // or something else that 
 
   logic clk;
 
-  IBUFDS IBUFDS_inst (
+  IBUFDS diff_to_singleEnded_clk_0 (
     .I(clk_300mhz_p),   // Positive clock input (300 MHz)
     .IB(clk_300mhz_n),  // Negative clock input (300 MHz)
     .O(clk)             // Single-ended clock output (300 MHz)
@@ -102,6 +102,9 @@ output logic TMDS_shift_blue0, TMDS_shift_blue1       // or something else that 
 ////////////////////////////////////////////////////////////////////////
   
   // Uncomment when 480p is used, comment out if 720p is used
+  // This IP-Core is not created. Create it with
+  // phase aligned, save clock startup, 300MHz input clk.
+  // The outputs are shown below
   /*clk_wiz_480p serial_and_pix_clk(
     .clk_out_25MHz(pix_clk),    
     .clk_out_125MHz(pix_clk_5x),

@@ -122,11 +122,7 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param power.enableUnconnectedCarry8PinPower 1
   set_param chipscope.maxJobs 32
-  set_param power.enableCarry8RouteBelPower 1
-  set_param power.BramSDPPropagationFix 1
-  set_param power.enableLutRouteBelPower 1
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xcvu9p-flga2104-2L-e
   set_property board_part xilinx.com:vcu118:part0:2.4 [current_project]
@@ -146,7 +142,6 @@ OPTRACE "add files" START { }
   read_ip -quiet /shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/ip/mult_35_24_core/mult_35_24_core.xci
   read_ip -quiet /shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/ip/mult_35_35_core/mult_35_35_core.xci
   read_ip -quiet /shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/ip/mult_gen_0/mult_gen_0.xci
-  read_ip -quiet /shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/ip/clk_wiz_480p/clk_wiz_480p.xci
   read_ip -quiet /shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/sources_1/ip/clk_wiz_720p/clk_wiz_720p.xci
 OPTRACE "read constraints: implementation" START { }
   read_xdc /shares/zitipoolhome/ol233/mb-fpga-VU9P/MandelbulbVU9P/MandelbulbVU9P.srcs/constrs_1/new/board_constr.xdc
