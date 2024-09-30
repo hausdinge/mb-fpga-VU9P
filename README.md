@@ -8,7 +8,7 @@ On this board it is possible to utilize 10x more LUTs and FFs compared to the FP
 
 ## Display output
 
-Unlike the Nexys Video, the VCU118 does not have a dedicated HDMI output, requiring us to find an alternative method to transmit data. To send an HD (1280x720) image from the FPGA to an HDMI port, we first need to encode each 8-bit color value into a 10-bit TMDS signal, which operates at a pixel clock frequency (`px_clk`) of 74.25 MHz. This signal must then be serialized at 10 times the `px_clk` frequency, reaching 742.5 MHz. 
+Unlike the Nexys Video, the VCU118 does not have a dedicated HDMI output, requiring us to find an alternative method to transmit data. To send an HD (1280x720) image from the FPGA to an HDMI port, we first need to encode each 8-bit color value into a 10-bit TMDS signal, which operates at a pixel clock frequency (`pix_clk`) of 74.25 MHz. This signal must then be serialized at 10 times the `pix_clk` frequency, reaching 742.5 MHz. 
 
 However, most pins on the VCU118 cannot handle such a high frequency, so we reduced the serialization frequency using double data rate (DDR) signaling. With DDR, we successfully lowered the serialization frequency to 371.25 MHz. The diagram below illustrates how this process was implemented:
 
